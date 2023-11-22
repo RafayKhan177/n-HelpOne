@@ -1,5 +1,10 @@
+"use client";
+import { Carousel } from "../components/Index";
+
 export default function page() {
   return (
-    <div>page</div>
-  )
+    <div>
+      <Carousel />
+    </div>
+  );
 }
