@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Carousel } from "../components/Index";
+import { Hero } from "../components/Index";
 
 export default function page() {
   return (
     <div>
-      <Carousel />
+      <Hero />
     </div>
   );
 }
