@@ -93,7 +93,7 @@ export default function HeaderMenu() {
   ));
 
   return (
-    <Box pb={120}>
+    <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
