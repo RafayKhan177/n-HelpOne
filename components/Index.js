@@ -10,3 +10,5 @@ export { default as Campaigns } from "./table/Campaigns";
 export { default as StatsGrid } from "./statsGrid/StatsGrid";
 
 export { default as Hero } from "./hero/Hero";
+export { default as Categories } from "./categories/Categories";
+export { default as Faq } from "./faq/Faq";
