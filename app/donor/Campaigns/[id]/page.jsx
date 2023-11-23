@@ -1,8 +1,6 @@
 "use client";
 
-import { accounts } from "static";
 import {
-  AllBankDetails,
   CampaignDetails,
   CustomHero,
   PageHeader,
@@ -29,7 +27,6 @@ export default function Page() {
 
       <CampaignDetails campaign={campaign} />
 
-      <AllBankDetails accounts={accounts} />
     </section>
   );
 }

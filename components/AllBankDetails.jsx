@@ -68,16 +68,22 @@ export default function AllBankDetails({ accounts }) {
     >
       <h1
         style={{
-          borderLeft: "10px solid #e63946",
+          borderLeft: "10px solid #1d3557",
           padding: "0 .5rem",
           fontWeight: 900,
           fontSize: "2rem",
-          color: "#ef233c",
+          color: "#457b9d",
         }}
       >
         All Bank Details
       </h1>
-      <p>
+      <p
+        style={{
+          color: "#343a40",
+          maxWidth: "37rem",
+          margin: ".5rem 0",
+        }}
+      >
         If You’re having trouble by paying donation or don’t want to put your
         details right above then we’ve mentioned our banking details running all
         across the globe. You can check what’s fits your need. Have a blessed
