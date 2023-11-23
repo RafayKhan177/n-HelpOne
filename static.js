@@ -53,4 +53,79 @@ const categories = [
   },
 ];
 
-export { dummyCampaigns, categories };
+const accounts = [
+  {
+    bank: "Bank Al Habib",
+    title: "JDC WELFARE ORGANIZATION",
+    account_number: "1031-0081-011633-01-2",
+    branch_address: "Main Water Pump Branch, Karachi",
+    iban: "PK11BAHL1031008101163301",
+    swift_code: "BAHL PKKA",
+  },
+  {
+    bank: "Silk Bank",
+    title: "JDC WELFARE FOUNDATION PAKISTAN",
+    account_number: "0043 2010079357",
+    branch_address: "PECHS Branch, Karachi",
+    iban: "PK83SAUD0000432010079357",
+    swift_code: "SAUDPKKA",
+  },
+  {
+    bank: "Habib Metro Bank",
+    title: "JDC WELFARE FOUNDATION OF PAKISTAN",
+    account_number: "6014420301714180277",
+    branch_address: "Main Water Pump Branch, Karachi",
+    iban: "PK49MPBL0144067140180277",
+    swift_code: "MPBLPKKA0144",
+  },
+  {
+    bank: "United Bank Limited",
+    title: "JDC WELFARE FOUNDATION OF PAKISTAN",
+    branch_code: "1301",
+    account_number: "273879738",
+    branch_address: "Superhighway branch, Karachi",
+    iban: "PK36 UNIL 0109 0002 7387 9738",
+  },
+  {
+    bank: "Bank Al Falah Limited",
+    title: "JDC WELFARE ORGANIZATION",
+    account_number: "07581007341422",
+    iban: "PK24ALFH0758001007341422",
+    branch_address: "Nazimabad branch, Karachi",
+    swift_code: "ALFHPKKA",
+  },
+  {
+    bank: "Meezan Bank Limited",
+    title: "JDC WELFARE FOUNDATION OF PAKISTAN",
+    account_number: "01060105477134",
+    iban: "PK14MEZN0001060105477134",
+    swift_code: "MEZNPKKA",
+  },
+  {
+    bank: "Mobilink (Jazz Cash)",
+    title: "JDC WELFARE ORGANIZATION",
+    account_number: "130265383",
+  },
+  {
+    bank: "Soneri Bank Limited",
+    title: "JDC WELFARE FOUNDATION OF PAKISTAN",
+    account_number: "20009846701",
+    iban: "PK45SONE0008220009846701",
+  },
+  {
+    bank: "Bank Islami",
+    title: "JDC WELFARE ORGANIZATION",
+    account_number: "102700616540366",
+    iban: "PK74BKIP0102700616540366",
+    swift_code: "BKIPPKKA",
+  },
+  {
+    bank: "Bank Alfalah Islamic",
+    title: "JDC WELFARE ORGANIZATION",
+    account_number: "5529-5001609082",
+    branch_code: "5529",
+    branch_address: "IBG North Nazimabad",
+  },
+];
+
+export { dummyCampaigns, categories, accounts };

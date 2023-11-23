@@ -1,21 +1,22 @@
 "use client";
 
 import { HStack, Tag, TagLabel, TagLeftIcon, Text } from "@chakra-ui/react";
+import { Container } from "@mantine/core";
 import Image from "next/image";
 
 export default function CampaignDetails({ campaign }) {
   const { name, description, startDate, endDate, cause, image } = campaign;
 
   return (
-    <section
+    <Container
+      size={"lg"}
       style={{
-        width: "100%",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         flexWrap: "wrap",
         flexShrink: 1,
-        margin: "4rem auto",
+        margin: "5rem auto",
         gap: "1rem",
       }}
     >
@@ -25,13 +26,13 @@ export default function CampaignDetails({ campaign }) {
             borderLeft: "10px solid #e63946",
             padding: "0 .5rem",
             fontWeight: 900,
-            fontSize: "2rem",
+            fontSize: "1.5rem",
             color: "#ef233c",
           }}
         >
           {cause}
         </h1>
-        <Text size="lg" width={550}>
+        <Text size="lg" style={{ width: "100%", maxWidth: "25rem" }}>
           {description}
         </Text>
         <HStack spacing={4}>
@@ -61,6 +62,6 @@ export default function CampaignDetails({ campaign }) {
           alt={name}
         />
       </div>
-    </section>
+    </Container>
   );
 }

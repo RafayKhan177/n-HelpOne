@@ -7,7 +7,6 @@ import {
   About,
 } from "../components/Index";
 import { categories } from "../static";
-import React from "react";
 
 export default function page() {
   return (

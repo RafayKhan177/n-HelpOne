@@ -1,6 +1,12 @@
 "use client";
 
-import { CampaignDetails, CustomHero } from "../../../../components/Index";
+import { accounts } from "static";
+import {
+  AllBankDetails,
+  CampaignDetails,
+  CustomHero,
+  PageHeader,
+} from "../../../../components/Index";
 
 export default function Page() {
   const campaign = {
@@ -18,9 +24,12 @@ export default function Page() {
 
   return (
     <section style={{ width: "100%" }}>
+      <PageHeader text="In a world of uncertainty, your generosity is a beacon of hope." />
       <CustomHero />
 
       <CampaignDetails campaign={campaign} />
+
+      <AllBankDetails accounts={accounts} />
     </section>
   );
 }
