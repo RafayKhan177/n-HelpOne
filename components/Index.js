@@ -1,3 +1,5 @@
+import { Help } from "./helpSection/Help";
+
 export { default as Header } from "./header/HeaderMenu";
 export { default as Footer } from "./footer/Footer";
 export { default as CustomizedBreadcrumbs } from "./CustomizedBreadcrumbs";
@@ -13,3 +15,4 @@ export { default as Categories } from "./categories/Categories";
 export { default as Faq } from "./faq/Faq";
 export { default as EmailBanner } from "./banner/email/Email";
 export { default as PageHeader } from "./PageHeader";
+export { default as Help } from "./helpSection/Help";
