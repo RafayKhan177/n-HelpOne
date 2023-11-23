@@ -154,15 +154,10 @@ export default function HeaderMenu() {
                           Wellcome Back
                         </Text>
                         <Text size="xs" c="dimmed">
-                          You're logged in as Administrater
+                          You are logged in as Administrater
                         </Text>
                       </div>
-                      {/* <Link
-                        style={{ textDecoration: "none" }}
-                        href="/Dashboard"
-                      > */}
                       <Button variant="default">Go Dashboard</Button>
-                      {/* </Link> */}
                     </Group>
                   </div>
                 </HoverCard.Dropdown>
