@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import "@mantine/core/styles.css";
 
 import { Footer, Header } from "../components/Index";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <MantineProvider>
             <Header />
+            <NextTopLoader />
             <section style={{ minHeight: "60vh" }}> {children}</section>
             <Footer />
           </MantineProvider>

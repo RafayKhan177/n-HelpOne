@@ -4,13 +4,14 @@ export default function PageHeader({ text, size, color }) {
   return (
     <div
       style={{
+        zIndex: 2,
         backgroundColor: color || "#e63946",
         margin: "auto",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: "1rem 0",
-        textTransform:'uppercase'
+        textTransform: "uppercase",
       }}
     >
       <Heading
