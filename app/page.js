@@ -4,11 +4,10 @@ import {
   Hero,
   EmailBanner,
   PageHeader,
-  Help,
+  About,
 } from "../components/Index";
 import { categories } from "../static";
 import React from "react";
-import { UsersRolesTable } from "../components/table/UserRoles";
 
 export default function page() {
   return (
@@ -19,7 +18,7 @@ export default function page() {
       <PageHeader text="Our Causes" color="#edf6f9" />
       <Categories categories={categories} />
 
-      <Help />
+      <About />
       {/* <PageHeader text="WORK"  color="#1d3557" /> */}
       <Faq />
 

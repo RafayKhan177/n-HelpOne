@@ -11,7 +11,7 @@ import {
   rem,
   useMantineTheme,
 } from "@mantine/core";
-import classes from "./Help.module.css";
+import classes from "./About.module.css";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import GroupsIcon from "@mui/icons-material/Groups";
@@ -36,7 +36,7 @@ const mockdata = [
   },
 ];
 
-export default function Help() {
+export default function About() {
   const theme = useMantineTheme();
   const features = mockdata.map((feature) => (
     <Card
