@@ -9,12 +9,11 @@ import {
   Button,
   Title,
   Text,
-  Anchor,
 } from "@mantine/core";
 import Link from "next/link";
 import classes from "./Signup.module.css";
 
-export default function Signup() {
+export default function Signup({ onSubmit }) {
   const [registrationInfo, setRegistrationInfo] = useState({
     fullName: "",
     email: "",
@@ -39,8 +38,7 @@ export default function Signup() {
   };
 
   const handleRegisterClick = () => {
-    console.log("Registration Info:", registrationInfo);
-    // Add logic to send registration info to server or perform other actions
+    onSubmit(registrationInfo);
   };
 
   return (

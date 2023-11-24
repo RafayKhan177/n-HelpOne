@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import classes from "./Signin.module.css";
 
-export default function Signin() {
+export default function Signin({ onSubmit }) {
   const [loginInfo, setLoginInfo] = useState({
     email: "",
     password: "",
@@ -36,8 +36,7 @@ export default function Signin() {
   };
 
   const handleLoginClick = () => {
-    console.log("Login Info:", loginInfo);
-    // Add logic to send login info to server or perform other actions
+    onSubmit(loginInfo);
   };
 
   return (
