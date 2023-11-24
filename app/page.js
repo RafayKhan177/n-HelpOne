@@ -67,7 +67,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div style={{ overflow: "hidden",width:'95vw' }}>
+    <div style={{ overflow: "hidden" }}>
       <motion.div
         initial="hidden"
         animate={pageHeaderControls}
