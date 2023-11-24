@@ -11,7 +11,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { app } from "../config";
-import { getDocById, getUserData } from "./get";
+import { getUserData } from "./get";
 
 const auth = getAuth(app);
 const db = getFirestore();
@@ -70,7 +70,7 @@ async function saveUserDataToUserDoc(email, data) {
   } catch (error) {
     const errorMessage =
       error.message || "An error occurred while saving user data.";
-    console.log(error.message);
+    console.log(errorMessage);
   }
 }
 
@@ -78,7 +78,7 @@ const logout = async () => {
   try {
     localStorage.removeItem("user");
     localStorage.removeItem("userDoc");
-    console.log("Logout Succesfully");
+    console.log("Logout Successfully");
     return true;
   } catch (error) {
     console.log(error.message);
