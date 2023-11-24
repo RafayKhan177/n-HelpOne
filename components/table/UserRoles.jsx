@@ -15,7 +15,7 @@ const data = [
     name: "Robert Wolfkisser",
     job: "Engineer",
     email: "rob_wolf@gmail.com",
-    role: "Collaborator",
+    role: "Administrator",
     lastActive: "2 days ago",
     active: true,
   },
@@ -25,7 +25,7 @@ const data = [
     name: "Jill Jailbreaker",
     job: "Engineer",
     email: "jj@breaker.com",
-    role: "Collaborator",
+    role: "Contributor",
     lastActive: "6 days ago",
     active: true,
   },
@@ -35,19 +35,9 @@ const data = [
     name: "Henry Silkeater",
     job: "Designer",
     email: "henry@silkeater.io",
-    role: "Contractor",
+    role: "Administrator",
     lastActive: "2 days ago",
     active: false,
-  },
-  {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
-    name: "Bill Horsefighter",
-    job: "Designer",
-    email: "bhorsefighter@gmail.com",
-    role: "Contractor",
-    lastActive: "5 days ago",
-    active: true,
   },
   {
     avatar:
@@ -55,13 +45,13 @@ const data = [
     name: "Jeremy Footviewer",
     job: "Manager",
     email: "jeremy@foot.dev",
-    role: "Manager",
+    role: "Contributor",
     lastActive: "3 days ago",
     active: false,
   },
 ];
 
-const rolesData = ["Manager", "Collaborator", "Contractor"];
+const rolesData = ["Contributor", "Administrator"];
 
 export default function UsersRolesTable() {
   const rows = data.map((item) => (
