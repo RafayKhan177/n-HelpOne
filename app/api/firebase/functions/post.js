@@ -34,24 +34,16 @@ async function updateDoc(collectionName, docId, data) {
     return true;
   } catch (error) {
     console.log(error);
-    return false;
   }
 }
 
 async function deleteDocument(collectionName, docId) {
-  const user = JSON.parse(localStorage.getItem("userDoc"));
-  if (!user) {
-    console.log("You're not logged in");
-    return null;
-  }
-
   try {
     const collectionRef = doc(db, collectionName, docId);
     await deleteDoc(collectionRef);
-    console.log(`Remooved`);
+    return true;
   } catch (error) {
     console.error("Error deleting document:", error);
-    console.log(`Something Went Wrong`);
   }
 }
 export { updateDoc, postDoc, deleteDocument };

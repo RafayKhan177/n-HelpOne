@@ -6,8 +6,6 @@ const dummyCampaigns = [
     startDate: new Date("2023-01-01"),
     endDate: new Date("2023-12-31"),
     cause: "Environmental Conservation",
-    image:
-      "https://images.unsplash.com/photo-1610500795224-fb86b02926d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "60a1e36b716d743b5f8ec6b4",
@@ -16,8 +14,7 @@ const dummyCampaigns = [
     startDate: new Date("2023-02-15"),
     endDate: new Date("2023-11-30"),
     cause: "Education",
-    image:
-      "https://htmldemo.net/grant-foundation/grant-foundation/img/couses/couses-two.jpg",
+    
   },
   {
     id: "60a1e36b716d743b5f8ec6b5",
@@ -27,8 +24,7 @@ const dummyCampaigns = [
     startDate: new Date("2023-03-10"),
     endDate: new Date("2023-09-30"),
 
-    image:
-      "https://htmldemo.net/grant-foundation/grant-foundation/img/couses/couses-three.jpg",
+    
   },
   {
     id: "60a1e36b716d743b5f8ec6b3",

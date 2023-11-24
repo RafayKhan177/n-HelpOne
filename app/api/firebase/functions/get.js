@@ -26,11 +26,6 @@ async function getDocById(docId, collectionName) {
 }
 
 async function getCollection(collectionName) {
-  const user = JSON.parse(localStorage.getItem("userDoc"));
-  if (!user) {
-    notify("You're not logged in");
-    return [];
-  }
   try {
     const q = collection(db, collectionName);
     const querySnapshot = await getDocs(q);

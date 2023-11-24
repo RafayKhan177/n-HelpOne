@@ -9,11 +9,25 @@ import {
   TagLeftIcon,
   TagLabel,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
+import { deleteDocument } from "app/api/firebase/functions/post";
 import { StatsGrid } from "components/Index";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function EditCampaign({ handleSave, campaignData }) {
+  const toast = useToast();
+  const notify = (msg, status) => {
+    toast({
+      title: msg,
+      status: status,
+      isClosable: true,
+    });
+  };
+
+  const navigate = useRouter();
+
   const [campaign, setCampaign] = useState(campaignData);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -24,6 +38,14 @@ export default function EditCampaign({ handleSave, campaignData }) {
   const handleSaveClick = () => {
     setIsEditing(false);
     handleSave(campaign);
+  };
+
+  const handleDelete = async () => {
+    const res = await deleteDocument("campaigns", campaignData.id);
+    if (res === true) {
+      notify("Deleted", "warning");
+      navigate.push("/administrator/CampaignManagement");
+    }
   };
 
   const handleChange = (e) => {
@@ -106,6 +128,15 @@ export default function EditCampaign({ handleSave, campaignData }) {
               Edit
             </Button>
           )}
+          <Button
+            ml={10}
+            colorScheme={"red"}
+            onDoubleClick={handleDelete}
+            onClick={() => notify("Click 2 times to delete", "info")}
+            mt={4}
+          >
+            Delete
+          </Button>
         </Box>
       </Center>
     </Box>

@@ -7,14 +7,12 @@ import { postDoc } from "../../../api/firebase/functions/post";
 
 export default function Page() {
   const initializedState = {
-    name: "",
     description: "",
     currentAmount: 0,
     startDate: new Date().toISOString().substring(0, 16), // Initialize with current date and time
     endDate: new Date().toISOString().substring(0, 16),
     cause: "",
     image: "",
-    donationProgress: 0,
   };
   const [newCampaign, setNewCampaign] = useState(initializedState);
 
@@ -49,9 +47,9 @@ export default function Page() {
             <Input
               variant="filled"
               size="md"
-              placeholder="Name"
-              name="name"
-              value={newCampaign.name}
+              placeholder="Cause"
+              name="cause"
+              value={newCampaign.cause}
               onChange={handleChange}
             />
             <Textarea
@@ -89,14 +87,7 @@ export default function Page() {
               value={newCampaign.endDate}
               onChange={handleChange}
             />
-            <Input
-              variant="filled"
-              size="md"
-              placeholder="Cause"
-              name="cause"
-              value={newCampaign.cause}
-              onChange={handleChange}
-            />
+
             <Input
               variant="filled"
               size="md"

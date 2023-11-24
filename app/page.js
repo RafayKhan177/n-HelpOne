@@ -9,7 +9,6 @@ import {
   PageHeader,
   About,
 } from "../components/Index";
-import { dummyCampaigns } from "../static";
 import { useEffect } from "react";
 
 const fadeInUp = {
@@ -80,7 +79,7 @@ export default function Page() {
         variants={slideInRight}
       >
         <PageHeader text="Our Causes" color="#edf6f9" />
-        <Categories categories={dummyCampaigns} />
+        <Categories />
       </motion.div>
 
       <About />

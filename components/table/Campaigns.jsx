@@ -25,11 +25,10 @@ const Campaigns = ({ campaigns }) => {
       minute: "numeric",
       hour12: true,
     };
-  
+
     const date = new Date(dateString);
     return date.toLocaleString("en-GB", options);
   };
-  
 
   return (
     <TableContainer mt={5}>
@@ -40,7 +39,6 @@ const Campaigns = ({ campaigns }) => {
         <TableCaption>Campaign Information</TableCaption>
         <Thead>
           <Tr>
-            <Th>Name</Th>
             <Th>Cause</Th>
             <Th>Start Date</Th>
             <Th>End Date</Th>
@@ -51,7 +49,6 @@ const Campaigns = ({ campaigns }) => {
           {campaigns &&
             campaigns.map((campaign) => (
               <Tr key={campaign._id}>
-                <Td>{campaign.name}</Td>
                 <Td>{campaign.cause}</Td>
                 <Td>{formattedDate(campaign.startDate)}</Td>
                 <Td>{formattedDate(campaign.endDate)}</Td>
@@ -72,7 +69,6 @@ const Campaigns = ({ campaigns }) => {
         </Tbody>
         <Tfoot>
           <Tr>
-            <Th>Name</Th>
             <Th>Cause</Th>
             <Th>Start Date</Th>
             <Th>End Date</Th>
