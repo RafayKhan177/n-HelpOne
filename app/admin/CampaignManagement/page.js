@@ -16,11 +16,9 @@ import Link from "next/link";
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredCampaigns =
-    dummyCampaigns &&
-    dummyCampaigns.filter((campaign) =>
-      campaign.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  const filteredCampaigns = dummyCampaigns.filter((campaign) =>
+    campaign.cause.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <Box mx="auto" width="90%">
