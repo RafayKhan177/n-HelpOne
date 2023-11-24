@@ -9,7 +9,7 @@ export default function Faq() {
         <div>
           <Title className={classes.title}>Frequently Asked Questions</Title>
           <Title className={classes.titleOverlay} role="presentation">
-            FAQ
+            CONTACT US
           </Title>
         </div>
 

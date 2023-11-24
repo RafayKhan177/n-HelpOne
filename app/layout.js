@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <MantineProvider>
             <Header />
-            <NextTopLoader />
+            <NextTopLoader showSpinner={false} color="#e63946" />
             <section style={{ minHeight: "60vh" }}> {children}</section>
             <Footer />
           </MantineProvider>

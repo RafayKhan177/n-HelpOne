@@ -44,14 +44,8 @@ export default function Page() {
     if (scrollPosition > 50) {
       pageHeaderControls.start("visible");
     }
-    if (scrollPosition > 150) {
-      heroControls.start("visible");
-    }
     if (scrollPosition > 500) {
       categoriesControls.start("visible");
-    }
-    if (scrollPosition > 800) {
-      aboutControls.start("visible");
     }
     if (scrollPosition > 1200) {
       faqControls.start("visible");
@@ -76,7 +70,7 @@ export default function Page() {
         <PageHeader text="In a world of uncertainty, your generosity is a beacon of hope." />
       </motion.div>
 
-      <motion.div initial="hidden" animate={heroControls} variants={fadeInUp}>
+      <motion.div animate={heroControls} variants={fadeInUp}>
         <Hero />
       </motion.div>
 
@@ -89,9 +83,7 @@ export default function Page() {
         <Categories categories={categories} />
       </motion.div>
 
-      <motion.div initial="hidden" animate={aboutControls} variants={fadeInUp}>
-        <About />
-      </motion.div>
+      <About />
 
       <motion.div
         initial="hidden"

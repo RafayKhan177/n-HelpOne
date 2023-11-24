@@ -3,8 +3,15 @@
 import cx from "clsx";
 import { Title, Text, Container, Button, Overlay } from "@mantine/core";
 import classes from "./Hero.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
+
+  const nav = (path) => {
+    router.push(path);
+  };
+
   return (
     <div className={classes.wrapper}>
       <Overlay color="#000" opacity={0} zIndex={1} />
@@ -23,14 +30,24 @@ export default function Hero() {
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
-            Get started
+          <Button
+            onClick={() => {
+              nav("/About");
+            }}
+            className={classes.control}
+            variant="white"
+            size="lg"
+          >
+            About Us
           </Button>
           <Button
+            onClick={() => {
+              nav("/Contact");
+            }}
             className={cx(classes.control, classes.secondaryControl)}
             size="lg"
           >
-            Live demo
+            Contact Us
           </Button>
         </div>
       </div>

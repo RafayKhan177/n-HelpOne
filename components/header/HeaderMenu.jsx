@@ -107,7 +107,7 @@ export default function HeaderMenu() {
           <p>Logo will show here</p>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <Link href="#" className={classes.link}>
+            <Link href="/" className={classes.link}>
               Home
             </Link>
 
@@ -120,25 +120,21 @@ export default function HeaderMenu() {
                 withinPortal
               >
                 <HoverCard.Target>
-                  <Link href="#" className={classes.link}>
-                    <Center inline>
-                      <Box component="span" mr={5}>
-                        Manage
-                      </Box>
-                      <IconChevronDown
-                        style={{ width: rem(16), height: rem(16) }}
-                        color={theme.colors.blue[6]}
-                      />
-                    </Center>
-                  </Link>
+                  <Center inline>
+                    <Box component="span" mr={5}>
+                      Manage
+                    </Box>
+                    <IconChevronDown
+                      style={{ width: rem(16), height: rem(16) }}
+                      color={theme.colors.blue[6]}
+                    />
+                  </Center>
                 </HoverCard.Target>
 
                 <HoverCard.Dropdown style={{ overflow: "hidden" }}>
                   <Group justify="space-between" px="md">
                     <Text fw={500}>Features</Text>
-                    <Anchor href="#" fz="xs">
-                      View all
-                    </Anchor>
+                    <Anchor fz="xs">View all</Anchor>
                   </Group>
 
                   <Divider my="sm" />
@@ -163,10 +159,10 @@ export default function HeaderMenu() {
                 </HoverCard.Dropdown>
               </HoverCard>
             ) : null}
-            <Link href="#" className={classes.link}>
+            <Link href="/About" className={classes.link}>
               About
             </Link>
-            <Link href="#" className={classes.link}>
+            <Link href="/Contact" className={classes.link}>
               Contact
             </Link>
           </Group>
@@ -195,9 +191,9 @@ export default function HeaderMenu() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="#" className={classes.link}>
+          <Link href="/" className={classes.link}>
             Home
-          </a>
+          </Link>
           {user === "admin" ? (
             <>
               <UnstyledButton className={classes.link} onClick={toggleLinks}>
@@ -214,12 +210,12 @@ export default function HeaderMenu() {
               <Collapse in={linksOpened}>{links}</Collapse>
             </>
           ) : null}
-          <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
+          <Link href="/About" className={classes.link}>
+            About
+          </Link>
+          <Link href="Contact" className={classes.link}>
+            Contact
+          </Link>
 
           <Divider my="sm" />
 
