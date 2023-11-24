@@ -43,16 +43,10 @@ const mockdata = [
     link: "/admin/Dashboard",
   },
   {
-    icon: IconCode,
+    icon: IconBook,
     title: "Campaigns",
     description: "Manage and organize your campaigns with this powerful tool. ",
     link: "/admin/CampaignManagement",
-  },
-  {
-    icon: IconBook,
-    title: "Donor Information",
-    description: "Efficiently handle donor information and interactions.",
-    link: "/admin/DonorManagement",
   },
   {
     icon: IconNotification,

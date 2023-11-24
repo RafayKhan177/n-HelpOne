@@ -1,3 +1,5 @@
+import { StatsGrid } from "components/Index";
+
 export default function Page() {
-  return <p>page</p>;
+  return <StatsGrid />;
 }

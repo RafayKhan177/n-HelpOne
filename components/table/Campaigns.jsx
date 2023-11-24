@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import {
   Button,
   Table,
@@ -11,10 +11,11 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Campaigns = ({ campaigns }) => {
-  console.log(campaigns);
+  const router = useRouter();
+
   return (
     <TableContainer mt={5}>
       <Table
@@ -40,7 +41,16 @@ const Campaigns = ({ campaigns }) => {
                 <Td>{campaign.startDate.toDateString()}</Td>
                 <Td>{campaign.endDate.toDateString()}</Td>
                 <Td>
-                  <Button colorScheme="blue">View</Button>
+                  <Button
+                    colorScheme="blue"
+                    onClick={() => {
+                      router.push(
+                        `/admin/CampaignManagement/View/${campaign._id}`
+                      );
+                    }}
+                  >
+                    View
+                  </Button>
                 </Td>
               </Tr>
             ))}

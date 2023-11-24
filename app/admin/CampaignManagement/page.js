@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 import {
-  CustomizedBreadcrumbs,
   Campaigns,
   StatsGrid,
 } from "../../../components/Index";
@@ -27,7 +26,6 @@ export default function Page() {
   return (
     <Box mx="auto" width="90%">
       <StatsGrid />
-      <CustomizedBreadcrumbs link={"#"} name={"Compaigns"} />
 
       <section style={{ margin: "2rem" }}>
         <InputGroup>

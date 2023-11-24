@@ -63,7 +63,7 @@ const data = [
 
 const rolesData = ["Manager", "Collaborator", "Contractor"];
 
-export function UsersRolesTable() {
+export default function UsersRolesTable() {
   const rows = data.map((item) => (
     <Table.Tr key={item.name}>
       <Table.Td>
