@@ -9,19 +9,18 @@ import {
   Button,
 } from "@chakra-ui/react";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
-import {
-  Campaigns,
-  StatsGrid,
-} from "../../../components/Index";
+import { Campaigns, StatsGrid } from "../../../components/Index";
 import { dummyCampaigns } from "../../../static";
 import Link from "next/link";
 
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredCampaigns = dummyCampaigns.filter((campaign) =>
-    campaign.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredCampaigns =
+    dummyCampaigns &&
+    dummyCampaigns.filter((campaign) =>
+      campaign.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
   return (
     <Box mx="auto" width="90%">
