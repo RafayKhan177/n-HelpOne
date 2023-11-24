@@ -12,7 +12,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 
-const MyProfile = ({ user }) => {
+const MyProfile = ({ user, onSave }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [userData, setUserData] = useState(user);
 
@@ -22,6 +22,7 @@ const MyProfile = ({ user }) => {
 
   const handleSaveClick = () => {
     setIsEditing(false);
+    onSave(userData);
   };
 
   const handleChange = (e) => {
@@ -46,14 +47,14 @@ const MyProfile = ({ user }) => {
       <Heading mb={5}>My Account</Heading>
       <VStack spacing={4} align="start">
         <FormControl>
-          <FormLabel>Username</FormLabel>
+          <FormLabel>Full Name</FormLabel>
           <Input
             variant="outline"
             colorScheme="whiteAlpha"
             size="md"
-            placeholder="Username"
-            name="username"
-            value={userData.username}
+            placeholder="Full Name"
+            name="fullName"
+            value={userData.fullName}
             onChange={handleChange}
             isReadOnly={!isEditing}
           />
@@ -67,21 +68,7 @@ const MyProfile = ({ user }) => {
             placeholder="Email"
             name="email"
             value={userData.email}
-            onChange={handleChange}
-            isReadOnly={!isEditing}
-          />
-        </FormControl>
-        <FormControl>
-          <FormLabel>Full Name</FormLabel>
-          <Input
-            variant="outline"
-            colorScheme="whiteAlpha"
-            size="md"
-            placeholder="Full Name"
-            name="fullName"
-            value={userData.fullName}
-            onChange={handleChange}
-            isReadOnly={!isEditing}
+            isReadOnly={true}
           />
         </FormControl>
         <FormControl>

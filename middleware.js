@@ -11,7 +11,7 @@ export function middleware(request) {
     (request.nextUrl.pathname.startsWith("/administrator/") ||
       request.nextUrl.pathname.startsWith("/contributor/"))
   ) {
-    return NextResponse.rewrite(new URL("/", request.url));
+    return NextResponse.rewrite(new URL("/Signin", request.url));
   }
 
   if (
