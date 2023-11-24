@@ -144,7 +144,7 @@ const user = {
   email: "john.doe@example.com",
   fullName: "John Doe",
   bio: "Passionate about making a positive impact!",
-  role: "Administrator",
+  role: "contributor",
 };
 
 export { dummyCampaigns, accounts, user };

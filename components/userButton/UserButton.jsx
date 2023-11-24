@@ -14,7 +14,7 @@ export default function UserButton({ user }) {
   return (
     <>
       {user && user ? (
-        <Link href="/donor/Profile">
+        <Link href="/contributor/Profile">
           <UnstyledButton className={classes.user}>
             <Group>
               <Avatar

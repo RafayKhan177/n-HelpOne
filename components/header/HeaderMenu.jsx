@@ -22,10 +22,8 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import {
   IconNotification,
-  IconCode,
   IconBook,
   IconChartPie3,
-  IconFingerprint,
   IconCoin,
   IconChevronDown,
 } from "@tabler/icons-react";
@@ -40,25 +38,25 @@ const mockdata = [
     title: "Dashboard",
     description:
       "Get a comprehensive overview of your activities and performance. ",
-    link: "/admin/Dashboard",
+    link: "/administrator/Dashboard",
   },
   {
     icon: IconBook,
     title: "Campaigns",
     description: "Manage and organize your campaigns with this powerful tool. ",
-    link: "/admin/CampaignManagement",
+    link: "/administrator/CampaignManagement",
   },
   {
     icon: IconNotification,
     title: "Access Controls",
     description: "Manage user access and permissions seamlessly.",
-    link: "/admin/UsersAndAccessControls",
+    link: "/administrator/UsersAndAccessControls",
   },
   {
     icon: IconChartPie3,
     title: "Analytics",
     description: "Analyze and visualize data for informed decision-making. ",
-    link: "/admin/FinancialReporting",
+    link: "/administrator/FinancialReporting",
   },
 ];
 
