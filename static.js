@@ -139,13 +139,12 @@ const accounts = [
   },
 ];
 
-const user = null
-// {
-//   username: "john_doe",
-//   email: "john.doe@example.com",
-//   fullName: "John Doe",
-//   bio: "Passionate about making a positive impact!",
-//   role: "contributor",
-// };
+const user = {
+  username: "john_doe",
+  email: "john.doe@example.com",
+  fullName: "John Doe",
+  bio: "Passionate about making a positive impact!",
+  role: "contributor",
+};
 
 export { dummyCampaigns, accounts, user };

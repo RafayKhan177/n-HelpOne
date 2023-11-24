@@ -6,6 +6,7 @@ export { default as AllBankDetails } from "./AllBankDetails";
 export { default as ContributionForm } from "./ContributionForm";
 export { default as ContributionCard } from "./ContributionCard";
 export { default as MyProfile } from "./MyProfile";
+export { default as EditCampaign } from "./EditCampaign";
 
 export { default as Signin } from "./authentication/signin/Signin";
 export { default as Signup } from "./authentication/signup/Signup";

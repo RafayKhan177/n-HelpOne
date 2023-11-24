@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Input,
   InputGroup,
@@ -10,15 +10,26 @@ import {
 } from "@chakra-ui/react";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 import { Campaigns, StatsGrid } from "../../../components/Index";
-import { dummyCampaigns } from "../../../static";
 import Link from "next/link";
+import { getCollection } from "app/api/firebase/functions/get";
 
 export default function Page() {
+  const [campaigns, setCampaigns] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredCampaigns = dummyCampaigns.filter((campaign) =>
+  const filteredCampaigns = campaigns.filter((campaign) =>
     campaign.cause.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  useEffect(() => {
+    const getCampaigns = async () => {
+      const res = await getCollection("campaigns");
+      if (res !== false) {
+        setCampaigns(res);
+      }
+    };
+    getCampaigns();
+  }, []);
 
   return (
     <Box mx="auto" width="90%">
@@ -36,7 +47,7 @@ export default function Page() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <Link
-            href="/CampaignManagement/Create"
+            href="/administrator/CampaignManagement/Create"
             style={{ textDecoration: "none" }}
           >
             <Button colorScheme="blue" ml={5}>

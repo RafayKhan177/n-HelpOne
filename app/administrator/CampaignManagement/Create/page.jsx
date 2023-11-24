@@ -1,19 +1,12 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Center,
-  Input,
-  Text,
-  Textarea,
-  VStack,
-} from "@chakra-ui/react";
-import { StatsGrid, CustomizedBreadcrumbs } from "components/Index";
+import { Box, Button, Center, Input, Textarea, VStack } from "@chakra-ui/react";
+import { StatsGrid } from "components/Index";
 import { useState } from "react";
+import { postDoc } from "../../../api/firebase/functions/post";
 
 export default function Page() {
-  const [newCampaign, setNewCampaign] = useState({
+  const initializedState = {
     name: "",
     description: "",
     currentAmount: 0,
@@ -22,12 +15,14 @@ export default function Page() {
     cause: "",
     image: "",
     donationProgress: 0,
-  });
+  };
+  const [newCampaign, setNewCampaign] = useState(initializedState);
 
-  const handleCreateClick = () => {
-    // Assuming you want to pass the new campaign data to a parent component
-    // onCreateCampaign(newCampaign);
-    console.log(newCampaign);
+  const handleCreateClick = async () => {
+    const res = await postDoc(newCampaign, "campaigns");
+    if (res === true) {
+      setNewCampaign(initializedState);
+    }
   };
 
   const handleChange = (e) => {
@@ -41,12 +36,6 @@ export default function Page() {
   return (
     <Box mx="auto" width="90%">
       <StatsGrid />
-      <CustomizedBreadcrumbs
-        link={"#"}
-        name={"Campaigns"}
-        link2={"#"}
-        name2={"Campaigns"}
-      />
       <Center h="60vh">
         <Box
           mt={200}

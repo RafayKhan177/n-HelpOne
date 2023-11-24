@@ -11,8 +11,6 @@ import { app } from "../config";
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const notify = (msg) => console.log(msg);
-
 async function getDocById(docId, collectionName) {
   const docRef = doc(db, collectionName, docId);
   try {
@@ -40,7 +38,7 @@ async function getCollection(collectionName) {
     return documents;
   } catch (error) {
     notify("Something Went Wrong fetching");
-    return [];
+    return false;
   }
 }
 

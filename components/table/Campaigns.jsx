@@ -16,6 +16,21 @@ import { useRouter } from "next/navigation";
 const Campaigns = ({ campaigns }) => {
   const router = useRouter();
 
+  const formattedDate = (dateString) => {
+    const options = {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    };
+  
+    const date = new Date(dateString);
+    return date.toLocaleString("en-GB", options);
+  };
+  
+
   return (
     <TableContainer mt={5}>
       <Table
@@ -38,14 +53,14 @@ const Campaigns = ({ campaigns }) => {
               <Tr key={campaign._id}>
                 <Td>{campaign.name}</Td>
                 <Td>{campaign.cause}</Td>
-                <Td>{campaign.startDate.toDateString()}</Td>
-                <Td>{campaign.endDate.toDateString()}</Td>
+                <Td>{formattedDate(campaign.startDate)}</Td>
+                <Td>{formattedDate(campaign.endDate)}</Td>
                 <Td>
                   <Button
                     colorScheme="blue"
                     onClick={() => {
                       router.push(
-                        `/admin/CampaignManagement/View/${campaign._id}`
+                        `/administrator/CampaignManagement/View/${campaign.id}`
                       );
                     }}
                   >
