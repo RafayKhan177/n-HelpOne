@@ -1,3 +1,6 @@
-export default function Page() {
-  return <p>page</p>;
+import MyProfile from "components/MyProfile";
+import { user } from "../../../static";
+
+export default function page() {
+  return <MyProfile user={user} />;
 }

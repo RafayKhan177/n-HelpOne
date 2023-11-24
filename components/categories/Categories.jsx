@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Container,
@@ -17,16 +17,16 @@ export default function Categories({ categories }) {
     router.push("/donor/Contribution");
   };
 
-  const items = categories.map((category) => (
+  const items = categories.map((item) => (
     <UnstyledButton
-      style={{ backgroundImage: `url(${category.image})` }}
+      style={{ backgroundImage: `url(${item.image})` }}
       className={classes.categoryCard}
-      key={category.label}
+      key={item.label}
       onClick={nav}
     >
       <Overlay color="#000" opacity={0.6} zIndex={1} />
       <Text size="xl" ta="center" fw={700} className={classes.categoryLabel}>
-        {category.label}
+        {item.cause}
       </Text>
     </UnstyledButton>
   ));

@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import React, { useState } from "react";
 import {
   Paper,
   TextInput,
@@ -14,6 +15,31 @@ import Link from "next/link";
 import classes from "./Signin.module.css";
 
 export default function Signin() {
+  const [loginInfo, setLoginInfo] = useState({
+    email: "",
+    password: "",
+    keepLoggedIn: true,
+  });
+
+  const handleInputChange = (field, value) => {
+    setLoginInfo((prevInfo) => ({
+      ...prevInfo,
+      [field]: value,
+    }));
+  };
+
+  const handleCheckboxChange = () => {
+    setLoginInfo((prevInfo) => ({
+      ...prevInfo,
+      keepLoggedIn: !prevInfo.keepLoggedIn,
+    }));
+  };
+
+  const handleLoginClick = () => {
+    console.log("Login Info:", loginInfo);
+    // Add logic to send login info to server or perform other actions
+  };
+
   return (
     <div className={classes.wrapper}>
       <Paper className={classes.form} radius={0} p={30} mt={0}>
@@ -25,25 +51,30 @@ export default function Signin() {
           label="Email address"
           placeholder="hello@gmail.com"
           size="md"
+          onChange={(event) => handleInputChange("email", event.target.value)}
         />
         <PasswordInput
           label="Password"
           placeholder="Your password"
           mt="md"
           size="md"
+          onChange={(event) =>
+            handleInputChange("password", event.target.value)
+          }
         />
-        <Checkbox label="Keep me logged in" mt="xl" size="md" />
-        <Button fullWidth mt="xl" size="md">
+        <Checkbox
+          label="Keep me logged in"
+          mt="xl"
+          size="md"
+          checked={loginInfo.keepLoggedIn}
+          onChange={handleCheckboxChange}
+        />
+        <Button fullWidth mt="xl" size="md" onClick={handleLoginClick}>
           Login
         </Button>
 
         <Text ta="center" mt="md">
-          Don&apos;t have an account?{" "}
-          <Link href="#">
-            {/* <Anchor fw={700} onClick={(event) => event.preventDefault()}> */}
-              Register
-            {/* </Anchor> */}
-          </Link>
+          Don&apos;t have an account? <Link href="/auth/Signup">Register</Link>
         </Text>
       </Paper>
     </div>
