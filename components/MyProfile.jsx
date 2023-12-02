@@ -22,15 +22,15 @@ const MyProfile = ({ user, onSave }) => {
 
   const handleSaveClick = () => {
     setIsEditing(false);
-    onSave(userData);
+    // onSave(userData);
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData((prevUserData) => ({
-      ...prevUserData,
-      [name]: value,
-    }));
+    // const { name, value } = e.target;
+    // setUserData((prevUserData) => ({
+    //   ...prevUserData,
+    //   [name]: value,
+    // }));
   };
 
   return (
@@ -54,7 +54,7 @@ const MyProfile = ({ user, onSave }) => {
             size="md"
             placeholder="Full Name"
             name="fullName"
-            value={userData.fullName || "You are'nt logged in"}
+            value={"Soon"}
             onChange={handleChange}
             isReadOnly={!isEditing}
           />
@@ -67,7 +67,7 @@ const MyProfile = ({ user, onSave }) => {
             size="md"
             placeholder="Email"
             name="email"
-            value={userData.email || "You are'nt logged in"}
+            value={"Soon"}
             isReadOnly={true}
           />
         </FormControl>
@@ -79,7 +79,7 @@ const MyProfile = ({ user, onSave }) => {
             size="md"
             placeholder="Bio"
             name="bio"
-            value={userData.bio || "You are'nt logged in"}
+            value={"Soon"}
             onChange={handleChange}
             isReadOnly={!isEditing}
           />

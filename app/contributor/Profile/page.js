@@ -25,5 +25,5 @@ export default function Page() {
     }
   };
 
-  return <MyProfile user={user} onSave={onSave} />;
+  return <MyProfile user={null} onSave={onSave} />;
 }
