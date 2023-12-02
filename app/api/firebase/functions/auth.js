@@ -1,3 +1,5 @@
+"use server";
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -76,9 +78,9 @@ async function saveUserDataToUserDoc(email, data) {
 
 const logout = async () => {
   try {
-    localStorage.removeItem("user");
-    localStorage.removeItem("userDoc");
-    console.log("Logout Successfully");
+    // localStorage.removeItem("user");
+    // localStorage.removeItem("userDoc");
+    // console.log("Logout Successfully");
     return true;
   } catch (error) {
     console.log(error.message);
