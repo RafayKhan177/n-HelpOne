@@ -14,7 +14,6 @@ const dummyCampaigns = [
     startDate: new Date("2023-02-15"),
     endDate: new Date("2023-11-30"),
     cause: "Education",
-    
   },
   {
     id: "60a1e36b716d743b5f8ec6b5",
@@ -23,8 +22,6 @@ const dummyCampaigns = [
     currentAmount: 100000,
     startDate: new Date("2023-03-10"),
     endDate: new Date("2023-09-30"),
-
-    
   },
   {
     id: "60a1e36b716d743b5f8ec6b3",
@@ -140,7 +137,7 @@ const user = {
   email: "john.doe@example.com",
   fullName: "John Doe",
   bio: "Passionate about making a positive impact!",
-  role: "contributor",
+  role: "Administrator",
 };
 
 export { dummyCampaigns, accounts, user };

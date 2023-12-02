@@ -15,8 +15,7 @@ export function middleware(request) {
   }
 
   if (
-    user &&
-    user?.role === "Contributor" &&
+    user.role === "Contributor" &&
     request.nextUrl.pathname.startsWith("/administrator/")
   ) {
     return NextResponse.rewrite(new URL("/", request.url));

@@ -8,90 +8,47 @@ import {
   Container,
 } from "@mantine/core";
 
-const data = [
-  {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
-    name: "Robert Wolfkisser",
-    job: "Engineer",
-    email: "rob_wolf@gmail.com",
-    role: "Administrator",
-    lastActive: "2 days ago",
-    active: true,
-  },
-  {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
-    name: "Jill Jailbreaker",
-    job: "Engineer",
-    email: "jj@breaker.com",
-    role: "Contributor",
-    lastActive: "6 days ago",
-    active: true,
-  },
-  {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
-    name: "Henry Silkeater",
-    job: "Designer",
-    email: "henry@silkeater.io",
-    role: "Administrator",
-    lastActive: "2 days ago",
-    active: false,
-  },
-  {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
-    name: "Jeremy Footviewer",
-    job: "Manager",
-    email: "jeremy@foot.dev",
-    role: "Contributor",
-    lastActive: "3 days ago",
-    active: false,
-  },
-];
-
 const rolesData = ["Contributor", "Administrator"];
 
-export default function UsersRolesTable() {
-  const rows = data.map((item) => (
-    <Table.Tr key={item.name}>
-      <Table.Td>
-        <Group gap="sm">
-          <Avatar size={40} src={item.avatar} radius={40} />
-          <div>
-            <Text fz="sm" fw={500}>
-              {item.name}
-            </Text>
-            <Text fz="xs" c="dimmed">
-              {item.email}
-            </Text>
-          </div>
-        </Group>
-      </Table.Td>
+export default function UsersRolesTable({ users, handleRole }) {
+  const rows =
+    users &&
+    users.map((user) => (
+      <Table.Tr key={user.email}>
+        <Table.Td>
+          <Group gap="sm">
+            <Avatar
+              size={40}
+              src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
+              radius={40}
+            />
+            <div>
+              <Text fz="sm" fw={500}>
+                {user.fullName}
+              </Text>
+              <Text fz="xs" c="dimmed">
+                {user.email}
+              </Text>
+            </div>
+          </Group>
+        </Table.Td>
 
-      <Table.Td>
-        <Select
-          data={rolesData}
-          defaultValue={item.role}
-          variant="unstyled"
-          allowDeselect={false}
-        />
-      </Table.Td>
-      <Table.Td>{item.lastActive}</Table.Td>
-      <Table.Td>
-        {item.active ? (
-          <Badge fullWidth variant="light">
-            Active
-          </Badge>
-        ) : (
-          <Badge color="gray" fullWidth variant="light">
-            Disabled
-          </Badge>
-        )}
-      </Table.Td>
-    </Table.Tr>
-  ));
+        <Table.Td>
+          <Select
+            data={rolesData}
+            defaultValue={user.role}
+            variant="unstyled"
+            allowDeselect={false}
+            onChange={(selectedRole) => handleChange(selectedRole, user.email)}
+          />
+        </Table.Td>
+        <Table.Td>{user.bio}</Table.Td>
+      </Table.Tr>
+    ));
+
+  const handleChange = (selectedRole, userEmail) => {
+    handleRole(selectedRole, userEmail);
+  };
 
   return (
     <Container size="lg">
@@ -99,10 +56,9 @@ export default function UsersRolesTable() {
         <Table verticalSpacing="sm">
           <Table.Thead>
             <Table.Tr>
-              <Table.Th>Employee</Table.Th>
+              <Table.Th>Users</Table.Th>
               <Table.Th>Role</Table.Th>
-              <Table.Th>Last active</Table.Th>
-              <Table.Th>Status</Table.Th>
+              <Table.Th>Bio</Table.Th>
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>{rows}</Table.Tbody>

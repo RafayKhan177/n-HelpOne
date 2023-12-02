@@ -22,3 +22,7 @@ export { default as Faq } from "./faq/Faq";
 export { default as EmailBanner } from "./banner/email/Email";
 export { default as PageHeader } from "./PageHeader";
 export { default as About } from "./about/About";
+export { default as WhoAreWe } from "./WhoAreWe";
+export { default as WhereWeWork } from "./WhereWeWork";
+export { default as OurWork } from "./OurWork";
+

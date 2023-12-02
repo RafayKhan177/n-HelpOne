@@ -16,8 +16,8 @@ export default function Categories() {
   const [campaigns, setCampaigns] = useState([]);
   const router = useRouter();
 
-  const nav = () => {
-    router.push("/contributor/Contribution");
+  const nav = (id) => {
+    router.push(`/contributor/Contribution/${id}`);
   };
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function Categories() {
         style={{ backgroundImage: `url(${item.image})` }}
         className={classes.categoryCard}
         key={item.label}
-        onClick={nav}
+        onClick={() => nav(item.id)}
       >
         <Overlay color="#000" opacity={0.6} zIndex={1} />
         <Text size="xl" ta="center" fw={700} className={classes.categoryLabel}>

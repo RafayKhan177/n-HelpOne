@@ -1,3 +1,5 @@
+"use server";
+
 import { getAuth } from "firebase/auth";
 import {
   collection,
@@ -7,6 +9,7 @@ import {
   getFirestore,
 } from "firebase/firestore";
 import { app } from "../config";
+import { cookies } from "next/headers";
 
 const auth = getAuth(app);
 const db = getFirestore(app);
@@ -21,7 +24,7 @@ async function getDocById(docId, collectionName) {
     }
     return docSnapshot.data();
   } catch (error) {
-    notify("Error fetching Doc:", error);
+    console.log("Error fetching Doc:", error);
   }
 }
 
@@ -30,6 +33,7 @@ async function getCollection(collectionName) {
     const q = collection(db, collectionName);
     const querySnapshot = await getDocs(q);
     const documents = querySnapshot.docs.map((doc) => doc.data());
+    console.log(documents)
     return documents;
   } catch (error) {
     notify("Something Went Wrong fetching");
@@ -40,7 +44,10 @@ async function getCollection(collectionName) {
 async function getUserData(email) {
   try {
     const userData = await getDocById(email, "users");
-    localStorage.setItem("userDoc", JSON.stringify(userData));
+    const cookieStore = cookies();
+    cookies().set(user, userData);
+    const session = cookieStore.get("user");
+    console.log(session, "h");
     return true;
   } catch (error) {
     console.log(error.message);
