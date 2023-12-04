@@ -17,8 +17,9 @@ export default function ContributionCard() {
   return (
     <Box
       mb={40}
-      maxW="lg"
+      maxW={{ base: "90%", sm: "90%", md: "90%", lg: "lg" }}
       mx="auto"
+      w={"lg"}
       bg="white"
       borderRadius="lg"
       overflow="hidden"

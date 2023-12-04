@@ -5,7 +5,7 @@ import { Box, Heading, Text, Image, Stack } from "@chakra-ui/react";
 // Define the WhoAreWe component
 const WhoAreWe = () => {
   return (
-    <Box p={8} m={"5%"} bg="gray.100" borderRadius="lg" boxShadow="md">
+    <Box p={"5%"} m={"5%"} bg="gray.100" borderRadius="lg" boxShadow="md">
       <Heading mb={4} fontSize="2xl" fontWeight="bold" color="teal.600">
         Who We Are
       </Heading>

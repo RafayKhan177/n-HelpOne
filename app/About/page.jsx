@@ -12,8 +12,15 @@ export default function Page() {
     <>
       <About /> <br />
       <br />
-      <Box p={8}>
-        <Tabs isFitted variant="enclosed" colorScheme="teal">
+      <Box>
+        <Tabs
+          p={{ base: "0", sm: "0", md: "5%", lg: "5%" }}
+          isFitted
+          variant="enclosed"
+          colorScheme="teal"
+        >
+          <h1 style={{ marginLeft: "2rem" }}>More About Us</h1>
+
           <TabList m={"6%"} mb="1em">
             <Tab>Who Are We</Tab>
             <Tab>Where We Work</Tab>
