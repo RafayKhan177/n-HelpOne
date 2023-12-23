@@ -1,7 +1,7 @@
 .wrapper {
     position: relative;
-    padding-top: rem(180px);
-    padding-bottom: rem(130px);
+    padding-top: rem(40px);
+    padding-bottom: rem(10px);
     background-image: url(https://htmldemo.net/grant-foundation/grant-foundation/img/slider/slide-two.jpg);
     background-size: cover;
     background-position: center;
@@ -24,7 +24,7 @@
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     color: var(--mantine-color-white);
-    margin-bottom: var(--mantine-spacing-xs);
+    /* margin-bottom: var(--mantine-spacing-xs); */
     text-align: center;
     font-family: Greycliff CF, var(--mantine-font-family);
 
@@ -40,7 +40,7 @@
 
 .description {
     color: var(--mantine-color-gray-0);
-    text-align: center;
+    /* text-align: center; */
 
     @media (max-width: $mantine-breakpoint-xs) {
         font-size: var(--mantine-font-size-md);

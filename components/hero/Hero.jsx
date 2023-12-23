@@ -1,9 +1,18 @@
 "use client";
 
 import cx from "clsx";
-import { Title, Text, Container, Button, Overlay } from "@mantine/core";
+import {
+  Title,
+  Text,
+  Container,
+  Button,
+  Overlay,
+  Box,
+  Center,
+} from "@mantine/core";
 import classes from "./Hero.module.css";
 import { useRouter } from "next/navigation";
+import { ContributionCard } from "components/Index";
 
 export default function Hero() {
   const router = useRouter();
@@ -13,43 +22,47 @@ export default function Hero() {
   };
 
   return (
-    <div className={classes.wrapper}>
+    <div
+      className={classes.wrapper}
+      style={{ display: "flex", alignItems: "center" }}
+    >
       <Overlay color="#000" opacity={0} zIndex={1} />
 
-      <div className={classes.inner}>
+      <div className={classes.inner} style={{ width: "99vw" }}>
         <Title className={classes.title}>WE CAN HELP SOMEONE</Title>
 
-        <Container size={700}>
-          <Text size="lg" className={classes.description}>
-            Amidst the chaos and challenges that life throws our way, there
-            exists an unwavering human spirit, a profound capacity for empathy
-            and compassion. It is this spirit that drives us to reach out to
-            others, to extend a helping hand, to offer solace and support to
-            those in need
-          </Text>
-        </Container>
-
-        <div className={classes.controls}>
-          <Button
-            onClick={() => {
-              nav("/About");
-            }}
-            className={classes.control}
-            variant="white"
-            size="lg"
-          >
-            About Us
-          </Button>
-          <Button
-            onClick={() => {
-              nav("/Contact");
-            }}
-            className={cx(classes.control, classes.secondaryControl)}
-            size="lg"
-          >
-            Contact Us
-          </Button>
-        </div>
+        <Center
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+            maxHeight: "50rem",
+          }}
+        >
+          <div>
+            <Text
+              size="lg"
+              className={classes.description}
+              style={{
+                width: "30rem",
+                margin: 0,
+                padding: 0,
+                maxWidth: "90vw",
+              }}
+            >
+              Amidst the chaos and challenges that life throws our way, there
+              exists an unwavering human spirit, a profound capacity for empathy
+              and compassion. It is this spirit that drives us to reach out to
+              others, to extend a helping hand, to offer solace and support to
+              those in need. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Laboriosam minima voluptatem perspiciatis animi doloremque
+              voluptas labore! Possimus, impedit labore? Consequuntur?
+            </Text>
+          </div>
+          <div style={{ marginTop: 120, maxWidth: "90vw" }}>
+            <ContributionCard />
+          </div>
+        </Center>
       </div>
     </div>
   );
