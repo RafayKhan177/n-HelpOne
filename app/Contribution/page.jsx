@@ -1,12 +1,12 @@
 "use client";
 
-import { accounts } from "../../../static";
+import { accounts } from "static";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import {
   AllBankDetails,
   ContributionForm,
   CustomHero,
-} from "../../../components/Index";
+} from "components/Index";
 
 export default function Page() {
   const handleContribute = (data) => {

@@ -78,7 +78,7 @@ export default function Page() {
         animate={categoriesControls}
         variants={slideInRight}
       >
-        <PageHeader text="Our Causes" color="#edf6f9" />
+        <PageHeader text="Our Causes"  />
         <Categories />
       </motion.div>
 

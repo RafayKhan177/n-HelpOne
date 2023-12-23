@@ -18,6 +18,7 @@ import {
   ScrollArea,
   rem,
   useMantineTheme,
+  Popover,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
@@ -31,6 +32,19 @@ import classes from "./HeaderMenu.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import UserButton from "../userButton/UserButton";
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
+} from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 
 const mockdata = [
   {
@@ -60,8 +74,31 @@ const mockdata = [
   },
 ];
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/Campaigns", label: "Campaigns" },
+  { href: "/Zakat", label: "Zakat" },
+  { href: "/Contact", label: "Contact" },
+  // { href: "/About", label: "About" },
+  // { href: "/OurWork", label: "Our Work" },
+  // { href: "/WhereWeWork", label: "Where We Work" },
+  // { href: "/WhoAreWe", label: "Who Are We" },
+];
+
+const about = [
+  { href: "/About", label: "About" },
+  { href: "/OurWork", label: "Our Work" },
+  { href: "/WhereWeWork", label: "Where We Work" },
+  { href: "/WhoAreWe", label: "Who Are We" },
+];
+
 export default function HeaderMenu() {
+  const nav = useRouter();
   const [user, setUser] = useState("admin");
+
+  const push = (url) => {
+    nav.push( url);
+  };
 
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
@@ -96,12 +133,35 @@ export default function HeaderMenu() {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
-          <p>Logo will show here</p>
+          <p>Logo will show</p>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <Link href="/" className={classes.link}>
-              Home
-            </Link>
+            {navLinks.map((link, index) => (
+              <Link key={index} href={link.href} className={classes.link}>
+                {link.label}
+              </Link>
+            ))}
+
+            <Popover width={200} position="bottom" withArrow shadow="md">
+              <Popover.Target>
+                <Link className={classes.link} href={"#"}>
+                  About Us
+                </Link>
+              </Popover.Target>
+              <Popover.Dropdown>
+                {about.map((link) => (
+                  <Button
+                    w={"100%"}
+                    mt={10}
+                    style={{ position: "a" }}
+                    key={link}
+                    onClick={() => push(link.href)}
+                  >
+                    {link.label}
+                  </Button>
+                ))}
+              </Popover.Dropdown>
+            </Popover>
 
             {user === "admin" ? (
               <HoverCard
@@ -113,7 +173,7 @@ export default function HeaderMenu() {
               >
                 <HoverCard.Target>
                   <Center inline>
-                    <Box component="span" mr={5}>
+                    <Box className={classes.link} component="span" mx={5}>
                       Manage
                     </Box>
                     <IconChevronDown
@@ -151,12 +211,6 @@ export default function HeaderMenu() {
                 </HoverCard.Dropdown>
               </HoverCard>
             ) : null}
-            <Link href="/About" className={classes.link}>
-              About
-            </Link>
-            <Link href="/Contact" className={classes.link}>
-              Contact
-            </Link>
           </Group>
 
           <Group visibleFrom="sm">
@@ -183,9 +237,11 @@ export default function HeaderMenu() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <Link href="/" className={classes.link}>
-            Home
-          </Link>
+          {navLinks.map((link, index) => (
+            <Link key={index} href={link.href} className={classes.link}>
+              {link.label}
+            </Link>
+          ))}
           {user === "admin" ? (
             <>
               <UnstyledButton className={classes.link} onClick={toggleLinks}>
@@ -202,12 +258,6 @@ export default function HeaderMenu() {
               <Collapse in={linksOpened}>{links}</Collapse>
             </>
           ) : null}
-          <Link href="/About" className={classes.link}>
-            About
-          </Link>
-          <Link href="Contact" className={classes.link}>
-            Contact
-          </Link>
 
           <Divider my="sm" />
 

@@ -1,15 +1,15 @@
 .wrapper {
     position: relative;
     padding-top: rem(40px);
-    padding-bottom: rem(10px);
+    padding-bottom: rem(0px);
     background-image: url(https://htmldemo.net/grant-foundation/grant-foundation/img/slider/slide-two.jpg);
     background-size: cover;
     background-position: center;
 
-    @media (max-width: $mantine-breakpoint-xs) {
+    /* @media (max-width: $mantine-breakpoint-xs) {
         padding-top: rem(80px);
         padding-bottom: rem(50px);
-    }
+    } */
 }
 
 .inner {

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getDocById } from "../../../api/firebase/functions/get"; // Assuming you have an api service for fetching data
+import { getDocById } from "../../api/firebase/functions/get"; // Assuming you have an api service for fetching data
 import { Box, Button, Flex, Spinner, Text } from "@chakra-ui/react";
 import {
   AllBankDetails,
   ContributionForm,
   CustomHero,
   CampaignDetails,
-} from "../../../../components/Index";
+} from "components/Index";
 import { usePathname } from "next/navigation";
-import { accounts } from "../../../../static";
+import { accounts } from "static";
 
 export default function Page() {
   const [invoice, setInvoice] = useState([]);
@@ -43,6 +43,8 @@ export default function Page() {
   const img =
     "https://img.freepik.com/free-photo/person-holding-heart-shaped-object_23-2150703734.jpg?t=st=1701007515~exp=1701011115~hmac=644cb17674f44360f7c3fd9766f1368df2cb079c1671fb2040436e23c6e357ff&w=826";
 
+  console.log(cause);
+
   return (
     <>
       <CustomHero imgc={img} />
@@ -68,7 +70,11 @@ export default function Page() {
           Pay This Amount
         </Text>
         <Box p={8} bg="white" borderRadius="xl">
-          <ContributionForm onContribute={handleContribute} />
+          {cause && cause ? (
+            <ContributionForm onContribute={handleContribute} dVal={"cause"} />
+          ) : (
+            <Spinner size="xs" />
+          )}
         </Box>
         <Flex mt={8} wrap={"wrap"} justify="space-between">
           <Button colorScheme="blue" size="lg" w={300}>

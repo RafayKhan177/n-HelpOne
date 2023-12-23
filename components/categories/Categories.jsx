@@ -17,7 +17,7 @@ export default function Categories() {
   const router = useRouter();
 
   const nav = (id) => {
-    router.push(`/contributor/Contribution/${id}`);
+    router.push(`/Contribution/${id}`);
   };
 
   useEffect(() => {

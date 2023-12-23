@@ -8,7 +8,7 @@ export default function ContributionCard() {
 
   const redirectToDonatePage = () => {
     // Redirect to the donation page
-    router.push("/contributor/Contribution");
+    router.push("/Contribution");
   };
 
   const img =

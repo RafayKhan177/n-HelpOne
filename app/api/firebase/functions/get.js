@@ -33,7 +33,7 @@ async function getCollection(collectionName) {
     const q = collection(db, collectionName);
     const querySnapshot = await getDocs(q);
     const documents = querySnapshot.docs.map((doc) => doc.data());
-    console.log(documents)
+    console.log(documents);
     return documents;
   } catch (error) {
     notify("Something Went Wrong fetching");
@@ -55,4 +55,22 @@ async function getUserData(email) {
   }
 }
 
-export { getDocById, getCollection, getUserData };
+async function getCausees(collectionName) {
+  try {
+    const q = collection(db, collectionName);
+    const querySnapshot = await getDocs(q);
+
+    const causeValues = querySnapshot.docs.map((doc) => {
+      const data = doc.data();
+      return data.cause; // Assuming 'cause' is the field you want to extract
+    });
+
+    console.log(causeValues);
+    return causeValues;
+  } catch (error) {
+    notify("Something Went Wrong fetching");
+    return false;
+  }
+}
+
+export { getDocById, getCollection, getUserData, getCausees };
