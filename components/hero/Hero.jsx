@@ -31,7 +31,7 @@ export default function Hero() {
       <div className={classes.inner} style={{ width: "99vw" }}>
         <Title className={classes.title}>WE CAN HELP SOMEONE</Title>
 
-        <Center
+        {/* <Center
           style={{
             display: "flex",
             justifyContent: "space-around",
@@ -62,7 +62,7 @@ export default function Hero() {
           <div style={{ marginTop: 120, maxWidth: "90vw" }}>
             <ContributionCard />
           </div>
-        </Center>
+        </Center> */}
       </div>
     </div>
   );

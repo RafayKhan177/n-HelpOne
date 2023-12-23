@@ -45,6 +45,7 @@ import {
   PopoverTrigger,
 } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const mockdata = [
   {
@@ -133,7 +134,8 @@ export default function HeaderMenu() {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
-          <p>Logo will show</p>
+          <Image src="/logo.png" width={70} height={70} alt="logo"/>
+
 
           <Group h="100%" gap={0} visibleFrom="sm">
             {navLinks.map((link, index) => (

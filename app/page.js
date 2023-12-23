@@ -8,7 +8,8 @@ import {
   EmailBanner,
   PageHeader,
   About,
-} from "../components/Index";
+  ProjectCard,
+} from "components/Index";
 import { useEffect } from "react";
 
 const fadeInUp = {
@@ -72,17 +73,20 @@ export default function Page() {
       <motion.div animate={heroControls} variants={fadeInUp}>
         <Hero />
       </motion.div>
+      <PageHeader text="We're proud of what we've built with you!" />
+      <ProjectCard />
 
       <motion.div
         initial="hidden"
         animate={categoriesControls}
         variants={slideInRight}
       >
-        <PageHeader text="Our Causes"  />
+        <PageHeader text="Our Causes" />
         <Categories />
       </motion.div>
 
-      <About />
+
+      {/* <About />
 
       <motion.div
         initial="hidden"
@@ -98,7 +102,7 @@ export default function Page() {
         variants={fadeInUp}
       >
         <EmailBanner />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

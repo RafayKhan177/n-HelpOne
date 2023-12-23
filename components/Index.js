@@ -7,6 +7,7 @@ export { default as ContributionForm } from "./ContributionForm";
 export { default as ContributionCard } from "./ContributionCard";
 export { default as MyProfile } from "./MyProfile";
 export { default as EditCampaign } from "./EditCampaign";
+export { default as ProjectCard } from "./ProjectCard/ProjectCard";
 
 export { default as Signin } from "./authentication/signin/Signin";
 export { default as Signup } from "./authentication/signup/Signup";
@@ -25,4 +26,3 @@ export { default as About } from "./about/About";
 export { default as WhoAreWe } from "./WhoAreWe";
 export { default as WhereWeWork } from "./WhereWeWork";
 export { default as OurWork } from "./OurWork";
-
