@@ -1,8 +1,8 @@
 .wrapper {
     position: relative;
-    padding-top: rem(200px);
-    padding-bottom: rem(200px);
-    background-image: url(https://img.freepik.com/free-photo/showcase-daily-life-activities-some-indigenous-people_23-2149711080.jpg?w=996&t=st=1703346658~exp=1703347258~hmac=7d2a0763ae0d5562a6fff72ba5797ac336c5ac6bf1db69deb13377423f653ce0);
+    padding-top: rem(230px);
+    padding-bottom: rem(230px);
+    background-image: url(../../public/hero.jpg);
     background-size: cover;
     background-position: center;
 

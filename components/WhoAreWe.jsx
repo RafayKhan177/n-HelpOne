@@ -153,7 +153,7 @@ const WhoAreWe = () => {
 
       {/* Staff from ECHO and WFP image Section */}
       <Image
-        src="/shaking-hands.jpg"
+        src="/daily-life-activities.jpg"
         alt="ECHO and WFP Staff"
         mb={8}
         borderRadius="md"

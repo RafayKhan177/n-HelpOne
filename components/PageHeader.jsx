@@ -4,7 +4,7 @@ export default function PageHeader({ h, text, size, color }) {
   return (
     <div
       style={{
-        zIndex: 2,
+        // zIndex: ,
         backgroundColor: color || "#0077b6",
         margin: "auto",
         display: "flex",

@@ -6,7 +6,6 @@ import classes from "./ProjectCard.module.css";
 import { useRouter } from "next/navigation";
 import { projectsData } from "static";
 
-
 const ProjectCard = ({ data, index }) => {
   const { projectName, disc, vid } = data;
   const nav = useRouter();
@@ -33,7 +32,7 @@ const ProjectCard = ({ data, index }) => {
             </Text>
           </Group>
           <Text fz="sm" mt="xs">
-            {disc}
+            {disc && disc.length > 40 ? `${disc.slice(0, 40)}...` : disc}
           </Text>
         </Card.Section>
 

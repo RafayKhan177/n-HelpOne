@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import classes from "./Hero.module.css";
 import { useRouter } from "next/navigation";
-import { ContributionCard } from "components/Index";
+// import { ContributionCard } from "components/Index";
 
 export default function Hero() {
   const router = useRouter();
@@ -28,8 +28,8 @@ export default function Hero() {
     >
       <Overlay color="#000" opacity={0} zIndex={1} />
 
-      <div className={classes.inner} style={{ width: "99vw" }}>
-        <Title className={classes.title}>WE CAN HELP SOMEONE</Title>
+      {/* <div className={classes.inner} style={{ width: "99vw" }}> */}
+        {/* <Title className={classes.title}>WE CAN HELP SOMEONE</Title> */}
 
         {/* <Center
           style={{
@@ -63,7 +63,7 @@ export default function Hero() {
             <ContributionCard />
           </div>
         </Center> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"uae client"
 // Import necessary libraries
 import React from "react";
 import {
@@ -12,113 +13,8 @@ import {
 
 // Define the WhereWeWork component
 const WhereWeWork = () => {
-  const countries = [
-    "Afghanistan",
-    "Algeria",
-    "Angola",
-    "Armenia",
-    "Bangladesh",
-    "Benin",
-    "Bhutan",
-    "Bolivia",
-    "Burkina Faso",
-    "Burundi",
-    "Cambodia",
-    "Cameroon",
-    "The Caribbean",
-    "Central African Republic",
-    "Chad",
-    "China",
-    "Colombia",
-    "Congo",
-    "Cuba",
-    "Côte d'Ivoire",
-    "Democratic Republic of the Congo",
-    "Djibouti",
-    "Dominican Republic",
-    "DPR Korea",
-    "Ecuador",
-    "Egypt",
-    "El Salvador",
-    "Eswatini",
-    "Ethiopia",
-    "Gambia",
-    "Ghana",
-    "Guatemala",
-    "Guinea",
-    "Guinea-Bissau",
-    "Haiti",
-    "Honduras",
-    "India",
-    "Indonesia",
-    "Iran",
-    "Iraq",
-    "Jordan",
-    "Kenya",
-    "Kyrgyz Republic",
-    "Laos",
-    "Lebanon",
-    "Lesotho",
-    "Liberia",
-    "Libya",
-    "Madagascar",
-    "Malawi",
-    "Mali",
-    "Mauritania",
-    "Moldova",
-    "Mozambique",
-    "Myanmar",
-    "Namibia",
-    "Nepal",
-    "Nicaragua",
-    "Niger",
-    "Nigeria",
-    "The Pacific",
-    "Pakistan",
-    "Palestine",
-    "Peru",
-    "Philippines",
-    "Rwanda",
-    "Sao Tome and Principe",
-    "Senegal",
-    "Sierra Leone",
-    "Somalia",
-    "South Sudan",
-    "Sri Lanka",
-    "Sudan",
-    "Syria",
-    "Tajikistan",
-    "Tanzania",
-    "Timor-Leste",
-    "Togo",
-    "Tunisia",
-    "Türkiye",
-    "Uganda",
-    "Ukraine",
-    "Venezuela",
-    "Yemen",
-    "Zambia",
-    "Zimbabwe",
-  ];
-
-  const emergencies = [
-    "Afghanistan emergency",
-    "Central Sahel emergency",
-    "Democratic Republic of the Congo emergency",
-    "Ethiopia emergency",
-    "Global food crisis",
-    "Haiti emergency",
-    "Myanmar emergency",
-    "North Eastern Nigeria emergency",
-    "Somalia emergency",
-    "Southern Madagascar emergency",
-    "South Sudan emergency",
-    "State of Palestine emergency",
-    "Sudan emergency",
-    "Syria emergency",
-    "Ukraine emergency",
-    "Yemen emergency",
-  ];
+  const countries = ["Pakistan"];
+  const emergencies = ["Pakistan emergency"];
 
   const getRandomColor = () => {
     const colors = [
@@ -138,42 +34,64 @@ const WhereWeWork = () => {
   return (
     <Box p={8} m={"5%"} bg="gray.100" borderRadius="lg" boxShadow="md">
       <Heading mb={4} fontSize="2xl" fontWeight="bold" color="teal.600">
-        Where We Work
+        Building a Brighter Pakistan: With and Without Your Donations
       </Heading>
 
       <Text fontSize="lg" lineHeight="tall" color="gray.700">
-        We work in 123 countries and territories, combining emergency assistance
-        with long-term development while adapting our activities to the context
-        and challenges of each location and its people.
+        Pakistan, a land of vibrant colors, rich history, and resilient people, faces significant challenges. Poverty, natural disasters, and social inequalities leave many communities struggling to meet their basic needs and build a brighter future. Here at [Your Organization Name], we are unwavering in our dedication to making a difference, hand in hand with the Pakistani people.
       </Text>
 
       <Stack mt={8} spacing={4}>
+        {/* Donations Section */}
         <Box>
           <Text fontSize="lg" fontWeight="bold" color="teal.600">
-            Countries
+            With Your Generous Donations:
           </Text>
           <List style={{ display: "flex", flexWrap: "wrap", gap: ".4rem" }}>
-            {countries.map((country, index) => (
-              <ListItem key={index}>
-                <Badge colorScheme={getRandomColor()}>{country}</Badge>
-              </ListItem>
-            ))}
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Beacons of Hope</Badge>: We are on the ground first, delivering emergency relief during crises such as floods and earthquakes. Your contributions fuel our rapid response, ensuring no one is left behind.
+            </ListItem>
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Empowerment and Reconstruction</Badge>: We empower communities to rebuild stronger than before, providing tools and training for sustainable reconstruction.
+            </ListItem>
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Investment in Education</Badge>: We believe education is the bedrock of a thriving society, building and refurbishing schools, training teachers, and providing scholarships to unlock potential.
+            </ListItem>
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Nurturing Healthcare</Badge>: We equip clinics and hospitals, train healthcare professionals, and raise awareness about hygiene and sanitation for healthier communities.
+            </ListItem>
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Championing Womens Rights</Badge>: We empower women through economic opportunities, vocational training, and awareness campaigns, driving social progress.
+            </ListItem>
           </List>
         </Box>
 
+        {/* Without Donations Section */}
         <Box>
           <Text fontSize="lg" fontWeight="bold" color="teal.600">
-            Emergencies
+            Even Without Your Financial Support, We Continue to Strive for a Better Pakistan:
           </Text>
           <List style={{ display: "flex", flexWrap: "wrap", gap: ".4rem" }}>
-            {emergencies.map((emergency, index) => (
-              <ListItem key={index}>
-                <Badge colorScheme={getRandomColor()}>{emergency}</Badge>
-              </ListItem>
-            ))}
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Advocating for Change</Badge>: We raise awareness about pressing issues, engage with policymakers, and hold powerful stakeholders accountable.
+            </ListItem>
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Building Partnerships</Badge>: We collaborate with local communities, NGOs, and government agencies, leveraging combined strengths to maximize impact.
+            </ListItem>
+            <ListItem>
+              <Badge colorScheme={getRandomColor()}>Sharing Knowledge and Expertise</Badge>: We conduct research, analyze data, and disseminate best practices, informing strategies for sustainable development.
+            </ListItem>
           </List>
         </Box>
       </Stack>
+
+      <Text mt={8} fontSize="lg" lineHeight="tall" color="gray.700">
+        Making a difference in Pakistan is a collective effort. With your donations, you become a vital partner in our mission. But even without a financial contribution, your voice, your awareness, and your belief in a brighter Pakistan carry immense power. Together, we can build a future where every Pakistani has the opportunity to thrive, contribute, and dream of a better tomorrow.
+      </Text>
+
+      <Text mt={4} fontSize="lg" lineHeight="tall" color="gray.700">
+        Join us. Lets make Pakistan a beacon of hope, resilience, and shared prosperity. Remember, no act of kindness is too small. Every contribution, every voice, every partnership makes a difference.
+      </Text>
     </Box>
   );
 };

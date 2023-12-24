@@ -135,7 +135,13 @@ export default function HeaderMenu() {
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
           <Link href="/">
-            <Image src="/logo.jpg" width={50} height={50} alt="logo" />
+            <Image
+              src="/logo.jpg"
+              width={65}
+              height={65}
+              alt="logo"
+              style={{ zIndex: 999 }}
+            />
           </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">

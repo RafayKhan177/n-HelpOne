@@ -62,11 +62,11 @@ export default function ProjectFounderDetails({ data }) {
           alignContent: "center",
           flexWrap: "wrap",
           gap: "20",
-          margin: "3rem 2rem",
+          margin: "3rem 0rem",
         }}
       >
         {item.vid.map((vid, index) => (
-          <Box key={index} m={3} w={300}>
+          <Box key={index} m={3} w={350}>
             <Box borderRadius="lg" overflow="hidden">
               <iframe
                 style={{ width: "100%", minHeight: "30vh" }}
@@ -81,9 +81,14 @@ export default function ProjectFounderDetails({ data }) {
       </section>
 
       {/* New Section for Name and Biography */}
-      <Box mt={8} textAlign="center">
-        <Text fontSize="2xl" fontWeight="bold">
-          {item.projectName}
+      <Box
+        mt={8}
+        textAlign="left"
+        style={{ borderLeft: ".5rem solid #0077b6" }}
+        pl={3}
+      >
+        <Text fontSize="2xl" fz="lg" fw={500} fontWeight="bold" style={{}}>
+          {item.projectName || item.authorName}
         </Text>
         <Text mt={4} fontSize="lg">
           {item.bio || item.disc}
