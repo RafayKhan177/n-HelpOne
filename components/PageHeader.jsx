@@ -1,6 +1,6 @@
 import { Heading } from "@chakra-ui/react";
 
-export default function PageHeader({ text, size, color }) {
+export default function PageHeader({ h, text, size, color }) {
   return (
     <div
       style={{
@@ -10,15 +10,17 @@ export default function PageHeader({ text, size, color }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "1rem 0",
+        padding: "0 0",
         textTransform: "uppercase",
       }}
     >
       <Heading
-        // style={{ backgroundColor: "#a8dadc", margin: "auto" }}
+        style={{ height: h, display: "flex", alignSelf: "center" }}
         as="h1"
-        size={"md" || size}
+        size={size || 34}
+        p={2}
         noOfLines={1}
+        color={"#fff"}
       >
         {text || "No Heading"}
       </Heading>

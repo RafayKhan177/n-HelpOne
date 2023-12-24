@@ -98,7 +98,7 @@ export default function HeaderMenu() {
   const [user, setUser] = useState("admin");
 
   const push = (url) => {
-    nav.push( url);
+    nav.push(url);
   };
 
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
@@ -130,12 +130,13 @@ export default function HeaderMenu() {
   ));
 
   return (
-    <Box pb={0}>
+    <Box pb={0} style={{ overflow: "hidden" }}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
-          <Image src="/logo.png" width={70} height={70} alt="logo"/>
-
+          <Link href="/">
+            <Image src="/logo.jpg" width={50} height={50} alt="logo" />
+          </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             {navLinks.map((link, index) => (
@@ -232,14 +233,19 @@ export default function HeaderMenu() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Navigation"
+        title="ALBASHIR"
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+        <ScrollArea h={`calc(90vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
           {navLinks.map((link, index) => (
+            <Link key={index} href={link.href} className={classes.link}>
+              {link.label}
+            </Link>
+          ))}
+          {about.map((link, index) => (
             <Link key={index} href={link.href} className={classes.link}>
               {link.label}
             </Link>
@@ -260,13 +266,11 @@ export default function HeaderMenu() {
               <Collapse in={linksOpened}>{links}</Collapse>
             </>
           ) : null}
-
-          <Divider my="sm" />
-
-          <Group justify="center" grow pb="xl" px="md">
-            <UserButton user={user} />
-          </Group>
         </ScrollArea>
+        <Divider my="sm" />
+        <Group justify="center" grow pb="xl" px="md">
+          <UserButton user={user} />
+        </Group>
       </Drawer>
     </Box>
   );

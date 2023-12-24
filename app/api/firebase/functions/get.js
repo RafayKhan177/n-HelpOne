@@ -19,7 +19,7 @@ async function getDocById(docId, collectionName) {
   try {
     const docSnapshot = await getDoc(docRef);
     if (!docSnapshot.exists()) {
-      notify("Doc not found.");
+      console.log("Doc not found.");
       return null;
     }
     return docSnapshot.data();
@@ -36,7 +36,7 @@ async function getCollection(collectionName) {
     console.log(documents);
     return documents;
   } catch (error) {
-    notify("Something Went Wrong fetching");
+    console.log("Something Went Wrong fetching");
     return false;
   }
 }
@@ -68,7 +68,7 @@ async function getCausees(collectionName) {
     console.log(causeValues);
     return causeValues;
   } catch (error) {
-    notify("Something Went Wrong fetching");
+    console.log("Something Went Wrong fetching");
     return false;
   }
 }

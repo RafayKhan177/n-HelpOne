@@ -10,13 +10,20 @@ import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Help One",
-  description: "Misson Reduce Hunger",
+  title: "AL-BASHIR",
+  description: "Opposite of poverty is justice",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/logo.jpg" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        />
+      </head>
       <body className={inter.className}>
         <Providers>
           <MantineProvider>

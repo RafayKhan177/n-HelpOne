@@ -9,7 +9,9 @@ import {
   PageHeader,
   About,
   ProjectCard,
+  AuthorCards,
 } from "components/Index";
+import { authorData } from "static";
 import { useEffect } from "react";
 
 const fadeInUp = {
@@ -67,7 +69,7 @@ export default function Page() {
         animate={pageHeaderControls}
         variants={fadeIn}
       >
-        <PageHeader text="In a world of uncertainty, your generosity is a beacon of hope." />
+        <PageHeader text="WE CAN HELP SOMEONE" />
       </motion.div>
 
       <motion.div animate={heroControls} variants={fadeInUp}>
@@ -85,8 +87,10 @@ export default function Page() {
         <Categories />
       </motion.div>
 
+      <PageHeader text="Projects Authors" />
+      <AuthorCards data={authorData} />
 
-      {/* <About />
+      <About />
 
       <motion.div
         initial="hidden"
@@ -102,7 +106,7 @@ export default function Page() {
         variants={fadeInUp}
       >
         <EmailBanner />
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 }
