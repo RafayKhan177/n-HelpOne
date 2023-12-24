@@ -1,7 +1,7 @@
 .wrapper {
     position: relative;
-    padding-top: rem(230px);
-    padding-bottom: rem(230px);
+    padding-top: rem(100px);
+    padding-bottom: rem(100px);
     background-image: url(../../public/hero.jpg);
     background-size: cover;
     background-position: center;
