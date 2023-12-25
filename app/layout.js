@@ -4,7 +4,7 @@ import { MantineProvider } from "@mantine/core";
 import { Providers } from "./providers";
 import "@mantine/core/styles.css";
 import logo from "public/logo.jpg";
-import { Footer, Header } from "../components/Index";
+import { Footer, Header, PageHeader } from "../components/Index";
 import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -48,6 +48,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers>
           <MantineProvider>
+            {/* <PageHeader text="OPPOSITE Of POVERTY is JUSTICE! " /> */}
+
             <Header />
             <NextTopLoader showSpinner={false} color="#e63946" />
             <section style={{ minHeight: "60vh" }}> {children}</section>

@@ -56,6 +56,7 @@ export default function App() {
       style={{
         display: "flex",
         justifyContent: "center",
+        width: "100vw",
       }}
     >
       <div
@@ -64,6 +65,7 @@ export default function App() {
           display: "flex",
           justifyContent: "flex-start",
           flexWrap: "wrap",
+          marginLeft: 40,
         }}
       >
         {projectsData.map((data, index) => (

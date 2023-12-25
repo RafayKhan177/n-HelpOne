@@ -24,14 +24,6 @@ export default function Page() {
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <PageHeader text="WE CAN HELP SOMEONE" />
-      </motion.div>
-
-      <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -80,8 +72,8 @@ export default function Page() {
       >
         <About />
       </motion.div>
-      
-      <ContributionCard /> 
+
+      <ContributionCard />
 
       <motion.div
         initial={{ opacity: 0 }}

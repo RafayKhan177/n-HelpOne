@@ -27,12 +27,22 @@ import {
   IconChartPie3,
   IconCoin,
   IconChevronDown,
+  IconChevronRight,
 } from "@tabler/icons-react";
 import classes from "./HeaderMenu.module.css";
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconPhone,
+} from "@tabler/icons-react";
+
 import Link from "next/link";
 import { useState } from "react";
 import UserButton from "../userButton/UserButton";
 import {
+  Flex,
+  Heading,
   Menu,
   MenuButton,
   MenuItem,
@@ -130,30 +140,109 @@ export default function HeaderMenu() {
   ));
 
   return (
-    <Box pb={0} style={{ overflow: "hidden" }}>
+    <Box pb={0} style={{ overflow: "hidden", position: "relative" }}>
+       <Flex
+      bg="#fff"
+      py={5}
+      alignItems="center"
+      justifyContent="space-between"
+      padding="0 1rem"
+      textTransform="uppercase"
+    >
+      {/* Social Media Icons */}
+      <Flex alignItems="center">
+        <Link
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          _hover={{ textDecoration: "none" }}
+        >
+          <IconBrandFacebook size={40} color="#3b5998" />
+        </Link>
+        <Link
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ml="1rem"
+          _hover={{ textDecoration: "none" }}
+        >
+          <IconBrandInstagram size={40} color="#e4405f" />
+        </Link>
+        <Link
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ml="1rem"
+          _hover={{ textDecoration: "none" }}
+        >
+          <IconBrandLinkedin size={40} color="#0077b5" />
+        </Link>
+      </Flex>
+
+      {/* Phone Icon */}
+      <Flex alignItems="center">
+        <IconPhone size={35} color="#000" />
+        {/* Uncomment the following lines if you want to add a phone link */}
+        {/* <Link href="tel:+1234567890" color="#fff" ml="0.5rem">
+          123-456-7890
+        </Link> */}
+      </Flex>
+    </Flex>
+      <Link href={"/Contribution"} >
+        <div
+          style={{
+            // zIndex: ,
+            backgroundColor: "#023e8a",
+            margin: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "end",
+            padding: "0 0",
+            textTransform: "uppercase",
+            paddingRight:30
+          }}
+        >
+          <Heading
+            style={{ display: "flex", alignSelf: "center" }}
+            as="h1"
+            size={34}
+            p={2}
+            noOfLines={1}
+            color={"#fff"}
+         
+          >
+            OPPOSITE Of POVERTY is JUSTICE!
+          </Heading>
+
+          <IconChevronRight
+            style={{ width: rem(14), height: rem(14), color: "#fff" }}
+            stroke={3.5}
+          />
+        </div>
+      </Link>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
           <Link href="/">
             <Image
               src="/logo.jpg"
-              width={65}
+              width={90}
               height={65}
               alt="logo"
-              style={{ zIndex: 999 }}
+              style={{ zIndex: 999, position: "absolute", top: 55 }}
             />
           </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             {navLinks.map((link, index) => (
-              <Link key={index} href={link.href} className={classes.link}>
+              <Link key={index} href={link.href} className={classes.link2}>
                 {link.label}
               </Link>
             ))}
 
             <Popover width={200} position="bottom" withArrow shadow="md">
               <Popover.Target>
-                <Link className={classes.link} href={"#"}>
+                <Link className={classes.link2} href={"#"}>
                   About Us
                 </Link>
               </Popover.Target>
@@ -182,7 +271,7 @@ export default function HeaderMenu() {
               >
                 <HoverCard.Target>
                   <Center inline>
-                    <Box className={classes.link} component="span" mx={5}>
+                    <Box className={classes.link2} component="span" mx={5}>
                       Manage
                     </Box>
                     <IconChevronDown
@@ -222,9 +311,13 @@ export default function HeaderMenu() {
             ) : null}
           </Group>
 
-          <Group visibleFrom="sm">
+          {/* <Group visibleFrom="sm">
             <UserButton user={user} />
-          </Group>
+          </Group> */}
+
+          <Button size="compact-xl" bg={"red"}>
+            Donate Now
+          </Button>
 
           <Burger
             opened={drawerOpened}
