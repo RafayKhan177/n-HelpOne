@@ -10,6 +10,7 @@ export { default as EditCampaign } from "./EditCampaign";
 export { default as ProjectCard } from "./ProjectCard/ProjectCard";
 export { default as AuthorCards } from "./author/AuthorCards";
 export { default as ProjectFounderDetails } from "./ProjectFounderDetails";
+export { default as Grids } from "./Grids/Grids";
 
 export { default as Signin } from "./authentication/signin/Signin";
 export { default as Signup } from "./authentication/signup/Signup";

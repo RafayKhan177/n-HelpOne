@@ -11,6 +11,7 @@ import classes from "./Categories.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getCollection } from "app/api/firebase/functions/get";
+import { Box, Button } from "@chakra-ui/react";
 
 export default function Categories() {
   const [campaigns, setCampaigns] = useState([]);
@@ -32,17 +33,46 @@ export default function Categories() {
   const items =
     campaigns &&
     campaigns.map((item) => (
-      <UnstyledButton
-        style={{ backgroundImage: `url(${item.image})` }}
-        className={classes.categoryCard}
+      <Box
         key={item.label}
-        onClick={() => nav(item.id)}
+        display="flex"
+        flexDirection="column"
+        borderRadius="1rem"
+        boxShadow="lg" // Add box shadow
+        mb={4} // Adjust margin as needed
       >
-        <Overlay color="#000" opacity={0.6} zIndex={1} />
-        <Text size="xl" ta="center" fw={700} className={classes.categoryLabel}>
-          {item.cause}
-        </Text>
-      </UnstyledButton>
+        <UnstyledButton
+          style={{ backgroundImage: `url(${item.image})` }}
+          className={classes.categoryCard}
+          onClick={() => nav(item.id)}
+        >
+          <Overlay color="#000" opacity={0.6} zIndex={1} />
+        </UnstyledButton>
+        <Box p={4}>
+          <Text
+            size="xl"
+            ta="center"
+            fw={700}
+            c={"#000"}
+            className={classes.categoryLabel}
+          >
+            {item.cause}
+          </Text>
+          <Text mt={2} c={"#333"}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nobis
+            unde quibusdam quos saepe veniam animi debitis ipsa voluptatibus
+            magni.
+          </Text>
+          <Button
+            onClick={() => nav(item.id)}
+            bgColor={"#ffb703"}
+            size="sm"
+            mt={2}
+          >
+            Donate Now
+          </Button>
+        </Box>
+      </Box>
     ));
 
   return (
