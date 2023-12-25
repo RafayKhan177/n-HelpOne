@@ -1,10 +1,11 @@
 import React from "react";
-import { Card, Text, Group, useMantineTheme } from "@mantine/core";
+import { Card, Text, Group, useMantineTheme, Image } from "@mantine/core";
 import classes from "./authorCards.module.css";
-import { Box, Container } from "@chakra-ui/react";
-import { useRouter } from "next/navigation";
+import { Box } from "@chakra-ui/react";
 
 export default function AuthorCards({ data }) {
+  console.log(data);
+
   return (
     <section
       size="lg"
@@ -20,6 +21,7 @@ export default function AuthorCards({ data }) {
       {data &&
         data.map((authorData, index) => {
           const { img, authorName, bio } = authorData;
+          console.log(img.im);
           return (
             <Box
               key={index}
@@ -34,12 +36,15 @@ export default function AuthorCards({ data }) {
                 className={classes.card}
                 radius="md"
                 component="a"
-                href={`/founders/${index}`}
+                href={`/founders/${authorData.id}`}
               >
                 <div
                   className={classes.image}
-                  style={{ backgroundImage: `url(${img[0].image})` }}
+                  style={{
+                    backgroundImage: `url(${img[0].im})`,
+                  }}
                 />
+
                 <div className={classes.overlay} />
 
                 <div className={classes.content}>
@@ -50,8 +55,8 @@ export default function AuthorCards({ data }) {
 
                     <Group justify="space-between" gap="xs">
                       <Text size="sm" className={classes.author}>
-                        {bio && bio.length > 70
-                          ? `${bio.slice(0, 70)}...`
+                        {bio && bio.length > 140
+                          ? `${bio.slice(0, 140)}...`
                           : bio}
                       </Text>
                     </Group>

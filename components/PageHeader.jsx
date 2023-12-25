@@ -8,7 +8,7 @@ export default function PageHeader({ h, text, size, color }) {
     <Link href={"/Contribution"}>
       <div
         style={{
-          margin: "auto",
+          margin: ".5rem auto",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -18,11 +18,16 @@ export default function PageHeader({ h, text, size, color }) {
         }}
       >
         <Heading
-          style={{ height: h, display: "flex", alignSelf: "center",fontSize:'1.5rem' }}
+          style={{
+            height: h,
+            display: "flex",
+            alignSelf: "center",
+            fontSize: "1.5rem",
+          }}
           // as="h1"
           size={600}
           p={2}
-          mb={6}
+          // mb={6}
           noOfLines={1}
           color={"#ffb703"}
         >

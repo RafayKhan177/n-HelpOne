@@ -1,5 +1,9 @@
-import { StatsGrid } from "components/Index";
+import { StatsGrid, AddProject, AddFounder } from "components/Index";
 
 export default function Page() {
-  return <StatsGrid />;
+  return (
+    <>
+      <StatsGrid /> <AddProject /> <AddFounder />
+    </>
+  );
 }

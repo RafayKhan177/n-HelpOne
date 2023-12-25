@@ -141,54 +141,70 @@ export default function HeaderMenu() {
 
   return (
     <Box pb={0} style={{ overflow: "hidden", position: "relative" }}>
-       <Flex
-      bg="#fff"
-      py={5}
-      alignItems="center"
-      justifyContent="space-between"
-      padding="0 1rem"
-      textTransform="uppercase"
-    >
-      {/* Social Media Icons */}
-      <Flex alignItems="center">
-        <Link
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          _hover={{ textDecoration: "none" }}
-        >
-          <IconBrandFacebook size={40} color="#3b5998" />
-        </Link>
-        <Link
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          ml="1rem"
-          _hover={{ textDecoration: "none" }}
-        >
-          <IconBrandInstagram size={40} color="#e4405f" />
-        </Link>
-        <Link
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          ml="1rem"
-          _hover={{ textDecoration: "none" }}
-        >
-          <IconBrandLinkedin size={40} color="#0077b5" />
-        </Link>
-      </Flex>
+      <Flex
+        bg="#fff"
+        py={5}
+        alignItems="center"
+        justifyContent="space-between"
+        padding="0 1rem"
+        textTransform="uppercase"
+      >
+        {/* Social Media Icons */}
+        <Flex alignItems="center">
+          <Link
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            _hover={{ textDecoration: "none" }}
+          >
+            <IconBrandFacebook
+              size={30}
+              style={{ padding: "2px" }}
+              color="#3b5998"
+            />
+          </Link>
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ml="1rem"
+            _hover={{ textDecoration: "none" }}
+          >
+            <IconBrandInstagram
+              size={30}
+              style={{ padding: "2px" }}
+              color="#e4405f"
+            />
+          </Link>
+          <Link
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ml="1rem"
+            _hover={{ textDecoration: "none" }}
+          >
+            <IconBrandLinkedin
+              size={30}
+              style={{ padding: "2px" }}
+              color="#0077b5"
+            />
+          </Link>
+        </Flex>
 
-      {/* Phone Icon */}
-      <Flex alignItems="center">
-        <IconPhone size={35} color="#000" />
-        {/* Uncomment the following lines if you want to add a phone link */}
-        {/* <Link href="tel:+1234567890" color="#fff" ml="0.5rem">
-          123-456-7890
-        </Link> */}
+        {/* Phone Icon */}
+        <Flex alignItems="center">
+          <IconPhone
+            size={28}
+            style={{ padding: "2px", color: "#fff" }}
+            color="#000"
+          />
+          {/* Uncomment the following lines if you want to add a phone link */}
+          <Link href="tel:+92 333 5593694" style={{ color: "#000" }} ml="0.5rem">
+          +92 333 5593694
+          </Link>
+        </Flex>
       </Flex>
-    </Flex>
-      <Link href={"/Contribution"} >
+      <Link href={"/Contribution"}>
         <div
           style={{
             // zIndex: ,
@@ -199,7 +215,7 @@ export default function HeaderMenu() {
             justifyContent: "end",
             padding: "0 0",
             textTransform: "uppercase",
-            paddingRight:30
+            paddingRight: 30,
           }}
         >
           <Heading
@@ -209,9 +225,8 @@ export default function HeaderMenu() {
             p={2}
             noOfLines={1}
             color={"#fff"}
-         
           >
-            OPPOSITE Of POVERTY is JUSTICE!
+            {/* OPPOSITE Of POVERTY is JUSTICE! */}
           </Heading>
 
           <IconChevronRight
@@ -227,9 +242,9 @@ export default function HeaderMenu() {
             <Image
               src="/logo.jpg"
               width={90}
-              height={65}
+              height={55}
               alt="logo"
-              style={{ zIndex: 999, position: "absolute", top: 55 }}
+              style={{ zIndex: 999, position: "absolute", top: 32 }}
             />
           </Link>
 
