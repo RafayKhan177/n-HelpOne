@@ -15,8 +15,17 @@ export default function OurWorkPicCollage() {
   const theme = useMantineTheme();
 
   return (
-    <Container size="lg" my="md">
-      <Title order={2} align="center" mt="sm">
+    <Container
+      size="lg"
+      my="md"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <Title order={2} mt="sm" style={{ margin: "auto" }}>
         Real Faces, Real Impact
       </Title>
       <Text py={10} align="center" mt="sm">
