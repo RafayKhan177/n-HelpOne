@@ -54,7 +54,7 @@ export default function Page() {
         transition={{ duration: 1 }}
       >
         <PageHeader text="Our Causes" />
-        {founders ? <Categories /> : <Skeleton height="20px" width="50%" />}
+        {founders ? <Categories /> : <Skeleton height="10rem" width="100%" />}
       </motion.div>
 
       <motion.div

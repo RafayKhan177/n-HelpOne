@@ -152,7 +152,7 @@ export default function HeaderMenu() {
         {/* Social Media Icons */}
         <Flex alignItems="center">
           <Link
-            href="https://facebook.com"
+            href="https://www.facebook.com/albashirwelfare"
             target="_blank"
             rel="noopener noreferrer"
             _hover={{ textDecoration: "none" }}
@@ -164,7 +164,7 @@ export default function HeaderMenu() {
             />
           </Link>
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/albashirwelfare/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             ml="1rem"
@@ -229,10 +229,10 @@ export default function HeaderMenu() {
             {/* OPPOSITE Of POVERTY is JUSTICE! */}
           </Heading>
 
-          <IconChevronRight
+          {/* <IconChevronRight
             style={{ width: rem(14), height: rem(14), color: "#fff" }}
             stroke={3.5}
-          />
+          /> */}
         </div>
       </Link>
       <header className={classes.header}>
@@ -330,7 +330,7 @@ export default function HeaderMenu() {
             <UserButton user={user} />
           </Group> */}
 
-          <Button size="compact-xl" bg={"red"}>
+          <Button size="compact-xl" ml={100} bg={"red"}>
             Donate Now
           </Button>
 
