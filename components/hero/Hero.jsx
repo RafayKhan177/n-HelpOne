@@ -16,8 +16,7 @@ export default function Hero() {
   const img4 =
     "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/WhatsApp%20Image%202023-12-24%20at%2018.36.59_6241d33c.jpg";
   const imgP1 =
-    "https://github.com/RafayKhan177/Raw-Images/blob/main/mobo1.png?raw=true";
-  ("https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/WhatsApp%20Image%202023-12-24%20at%2018.36.59_6241d33c.jpg");
+    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/Mobo1AL-BASHIR%20WEL%20ARE.png";
 
   return (
     <>
@@ -67,7 +66,6 @@ export default function Hero() {
             />
           </div>
         </Carousel>
-      
       </Show>
 
       <Show breakpoint="(max-width: 1000px)">
@@ -80,7 +78,7 @@ export default function Hero() {
               height={1500}
               style={{
                 width: "100vw",
-                height: "50vh",
+                height: "53vh",
                 objectFit: "cover",
                 maxHeight: "70vh",
               }}
