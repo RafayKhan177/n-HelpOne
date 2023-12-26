@@ -133,11 +133,12 @@ export default function HeaderMenu() {
         bg="#023e8a"
         alignItems="center"
         justifyContent="space-between"
-        padding="0 1rem"
+        m={0}
+        p={0}
         textTransform="uppercase"
       >
         {/* Social Media Icons */}
-        <Flex alignItems="center" p={1}>
+        <Flex alignItems="center" px={1}>
           <Link
             href="https://www.facebook.com/albashirwelfare"
             target="_blank"
@@ -145,8 +146,8 @@ export default function HeaderMenu() {
             _hover={{ textDecoration: "none" }}
           >
             <IconBrandFacebook
-              size={30}
-              style={{ padding: "2px" }}
+              size={20}
+              // style={{ padding: "2px" }}
               color="#3b5998"
             />
           </Link>
@@ -158,42 +159,51 @@ export default function HeaderMenu() {
             _hover={{ textDecoration: "none" }}
           >
             <IconBrandInstagram
-              size={30}
+              size={25}
               style={{ padding: "2px" }}
               color="#e4405f"
             />
           </Link>
           <Link
-            href="https://linkedin.com"
-            target="_blank"
+            href="mailto:your.email@gmail.com"
             rel="noopener noreferrer"
             ml="1rem"
             _hover={{ textDecoration: "none" }}
+            style={{
+              color: "#fff",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontSize:'.8rem'
+            }}
           >
             <MailRoundedIcon
-              size={60}
               style={{
-                padding: "2px",
                 color: "#fff",
-                fontSize: "27px",
-                marginTop: "3px",
+                fontSize: "20px",
+                marginRight:'1rem'
               }}
               color="#fff"
-            />
+            />{" "}
+            www.google.com
           </Link>
         </Flex>
 
         {/* Phone Icon */}
-        <Flex alignItems="center" p={1}>
+        <Flex
+          alignItems="center"
+          px={1}
+          style={{ backgroundColor: "lightgray", height: "2rem" }}
+        >
           <IconPhone
-            size={28}
+            size={22}
             style={{ padding: "2px", color: "#fff" }}
-            color="#fff"
+            color="#000"
           />
           {/* Uncomment the following lines if you want to add a phone link */}
           <Link
             href="tel:+92 333 5593694"
-            style={{ color: "#fff" }}
+            style={{ color: "#000", fontSize: ".7rem" }}
             ml="0.5rem"
           >
             +92 333 5593694
@@ -204,7 +214,7 @@ export default function HeaderMenu() {
         <div
           style={{
             // zIndex: ,
-            backgroundColor: "#023e8a",
+            backgroundColor: "#fff",
             margin: "auto",
             display: "flex",
             alignItems: "center",
@@ -232,10 +242,16 @@ export default function HeaderMenu() {
           <Link href="/">
             <Image
               src="/logo.png"
-              width={80}
-              height={40}
+              width={900}
+              height={900}
               alt="logo"
-              style={{ zIndex: 999, position: "absolute", top: 45 }}
+              style={{
+                zIndex: 999,
+                position: "absolute",
+                top: 45,
+                width: "auto",
+                height: "3.8rem",
+              }}
             />
           </Link>
 
@@ -326,14 +342,14 @@ export default function HeaderMenu() {
           >
             <Link href={"/Contribution"}>
               <VolunteerActivismRoundedIcon
-                style={{ color: "#fff", marginRight: 5 }}
+                style={{ color: "#000", marginRight: 30, marginTop: "5" }}
               />
             </Link>
             <Burger
               opened={drawerOpened}
               onClick={toggleDrawer}
               hiddenFrom="sm"
-              color={"#fff"}
+              color={"#000"}
             />
           </div>
         </Group>

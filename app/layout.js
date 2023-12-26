@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
             {/* <PageHeader text="OPPOSITE Of POVERTY is JUSTICE! " /> */}
 
             <Header />
-            <NextTopLoader showSpinner={false} color="#e63946" />
+            {/* <NextTopLoader showSpinner={false} color="#e63946" /> */}
             <section style={{ minHeight: "60vh" }}> {children}</section>
             <Footer />
           </MantineProvider>

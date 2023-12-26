@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import {
@@ -53,7 +53,7 @@ export default function OurWorkPicCollage() {
               width: "100%",
               borderRadius: "1rem",
               objectFit: "cover",
-              height: BASE_HEIGHT / 2 - px(theme.spacing.md),
+              height: BASE_HEIGHT / 2 - Number(px(theme.spacing.md)),
             }}
           />
           <Image
@@ -63,7 +63,7 @@ export default function OurWorkPicCollage() {
               width: "100%",
               borderRadius: "1rem",
               objectFit: "cover",
-              height: BASE_HEIGHT / 2 - px(theme.spacing.md),
+              height: BASE_HEIGHT / 2 - Number(px(theme.spacing.md)),
             }}
           />
         </Stack>
@@ -74,9 +74,8 @@ export default function OurWorkPicCollage() {
             style={{
               width: "100%",
               borderRadius: "1rem",
-
               objectFit: "cover",
-              height: BASE_HEIGHT / 3 - px(theme.spacing.md),
+              height: BASE_HEIGHT / 2 - Number(px(theme.spacing.md)),
             }}
           />
           <Image
@@ -86,17 +85,7 @@ export default function OurWorkPicCollage() {
               width: "100%",
               borderRadius: "1rem",
               objectFit: "cover",
-              height: BASE_HEIGHT / 3 - px(theme.spacing.md),
-            }}
-          />
-          <Image
-            src="https://img.freepik.com/free-photo/kids-having-fun-as-boy-scouts_23-2149657072.jpg?t=st=1703512296~exp=1703512896~hmac=bcb2952fe9b47efbc2c9371a992d2148877cdbf7ee4fbf5efda4c70862ac8f2f"
-            alt="Work Image 6"
-            style={{
-              width: "100%",
-              borderRadius: "1rem",
-              objectFit: "cover",
-              height: BASE_HEIGHT / 3 - px(theme.spacing.md),
+              height: BASE_HEIGHT / 2 - Number(px(theme.spacing.md)),
             }}
           />
         </Stack>

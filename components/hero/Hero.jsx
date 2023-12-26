@@ -80,7 +80,7 @@ export default function Hero() {
               height={1500}
               style={{
                 width: "100vw",
-                height: "48vh",
+                height: "50vh",
                 objectFit: "cover",
                 maxHeight: "70vh",
               }}

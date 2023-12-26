@@ -26,6 +26,7 @@ export { default as StatsGrid } from "./statsGrid/StatsGrid";
 export { default as Hero } from "./hero/Hero";
 export { default as CustomHero } from "./hero/CustomHero";
 export { default as Categories } from "./categories/Categories";
+export { default as FaqAcc } from "./faq/FaqAcc";
 export { default as Faq } from "./faq/Faq";
 export { default as EmailBanner } from "./banner/email/Email";
 export { default as PageHeader } from "./PageHeader";

@@ -14,10 +14,12 @@ import {
   Grids,
   News,
   OurWorkPicCollage,
+  FaqAcc,
 } from "components/Index";
 import { getCollection } from "./api/firebase/functions/get";
 import { Skeleton } from "@chakra-ui/react";
-import { Button } from "@mantine/core";
+import { Button, Divider } from "@mantine/core";
+// import {  } from "components/faq/FaqAcc";
 
 export default function Page() {
   const [founders, setFounders] = useState(null);
@@ -47,6 +49,7 @@ export default function Page() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Divider />
       <Hero />
       <div style={{ position: "relative" }}>
         <Button
@@ -84,19 +87,6 @@ export default function Page() {
 
       <Grids />
 
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <PageHeader text="We're proud of what we've built with you!" />
-        {projects ? (
-          <ProjectCard data={projects} />
-        ) : (
-          <Skeleton height="20px" width="50%" />
-        )}
-      </motion.div> */}
-
       <div style={{ marginTop: 10 }}>
         <About />
       </div>
@@ -106,7 +96,7 @@ export default function Page() {
         {founders ? (
           <AuthorCards data={founders} />
         ) : (
-          <Skeleton height="20px" width="50%" />
+          <Skeleton height="10rem" width="100%" />
         )}
       </div>
 
@@ -117,6 +107,7 @@ export default function Page() {
       <OurWorkPicCollage />
 
       <div>
+        <FaqAcc />
         <Faq />
       </div>
 
