@@ -59,6 +59,8 @@ const AddFounder = () => {
         {/* Set width for the entire box */}
         <Text>Founder Name:</Text>
         <Input
+          variant={"filled"}
+          my={3}
           value={founderData.authorName}
           onChange={(e) =>
             setFounderData({ ...founderData, authorName: e.target.value })
@@ -71,6 +73,8 @@ const AddFounder = () => {
         {/* Set width for the entire box */}
         <Text>Bio:</Text>
         <Input
+          variant={"filled"}
+          my={3}
           value={founderData.bio}
           onChange={(e) =>
             setFounderData({ ...founderData, bio: e.target.value })
@@ -84,6 +88,8 @@ const AddFounder = () => {
         <Text>Images:</Text>
         {founderData.img.map((image, index) => (
           <Input
+            variant={"filled"}
+            my={3}
             key={index}
             value={image.image}
             onChange={(e) => handleInputChange("img", e.target.value, index)}
@@ -98,6 +104,8 @@ const AddFounder = () => {
         <Text>Videos:</Text>
         {founderData.vid.map((video, index) => (
           <Input
+            variant={"filled"}
+            my={3}
             key={index}
             value={video.video}
             onChange={(e) => handleInputChange("vid", e.target.value, index)}

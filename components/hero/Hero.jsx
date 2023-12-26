@@ -17,6 +17,8 @@ export default function Hero() {
     "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/WhatsApp%20Image%202023-12-24%20at%2018.36.59_6241d33c.jpg";
   const imgP1 =
     "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/Mobo1AL-BASHIR%20WEL%20ARE.png";
+  const imgP2 =
+    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo1.png";
 
   return (
     <>
@@ -78,9 +80,23 @@ export default function Hero() {
               height={1500}
               style={{
                 width: "100vw",
-                height: "53vh",
+                height: "auto",
                 objectFit: "cover",
-                maxHeight: "70vh",
+                maxHeight: "100vh",
+              }}
+            />
+          </div>{" "}
+          <div>
+            <Image
+              src={imgP2}
+              alt="hero-image"
+              width={900}
+              height={1500}
+              style={{
+                width: "100vw",
+                height: "auto",
+                objectFit: "cover",
+                maxHeight: "100vh",
               }}
             />
           </div>

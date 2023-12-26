@@ -54,22 +54,23 @@ const mockdata = [
     link: "/administrator/Dashboard",
   },
   {
+    icon: IconChartPie3,
+    title: "Analytics",
+    description: "Analyze and visualize data for informed decision-making. ",
+    link: "/administrator/FinancialReporting",
+  },
+  {
     icon: IconBook,
-    title: "Campaigns",
+    title: "Projects",
     description: "Manage and organize your campaigns with this powerful tool. ",
     link: "/administrator/CampaignManagement",
   },
   {
     icon: IconNotification,
-    title: "Access Controls",
-    description: "Manage user access and permissions seamlessly.",
-    link: "/administrator/UsersAndAccessControls",
-  },
-  {
-    icon: IconChartPie3,
-    title: "Analytics",
-    description: "Analyze and visualize data for informed decision-making. ",
-    link: "/administrator/FinancialReporting",
+    title: "Founders",
+    description: "Manage and organize your campaigns with this powerful tool. ",
+
+    link: "/administrator/FounderManagement",
   },
 ];
 
@@ -174,14 +175,14 @@ export default function HeaderMenu() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              fontSize:'.8rem'
+              fontSize: ".8rem",
             }}
           >
             <MailRoundedIcon
               style={{
                 color: "#fff",
                 fontSize: "20px",
-                marginRight:'1rem'
+                marginRight: "1rem",
               }}
               color="#fff"
             />{" "}

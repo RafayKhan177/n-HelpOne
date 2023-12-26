@@ -40,28 +40,24 @@ const Campaigns = ({ campaigns }) => {
         <Thead>
           <Tr>
             <Th>Cause</Th>
-            <Th>Start Date</Th>
-            <Th>End Date</Th>
-            <Th>View</Th>
+            <Th>Delete</Th>
           </Tr>
         </Thead>
         <Tbody>
           {campaigns &&
             campaigns.map((campaign) => (
-              <Tr key={campaign._id}>
-                <Td>{campaign.cause}</Td>
-                <Td>{formattedDate(campaign.startDate)}</Td>
-                <Td>{formattedDate(campaign.endDate)}</Td>
+              <Tr key={campaign._id || campaign.id}>
+                <Td>{campaign.projectName || campaign.authorName || null}</Td>
                 <Td>
                   <Button
                     colorScheme="blue"
                     onClick={() => {
                       router.push(
-                        `/administrator/CampaignManagement/View/${campaign.id}`
+                        `/administrator/CampaignManagement/Delete/${campaign.id}`
                       );
                     }}
                   >
-                    View
+                    Delete
                   </Button>
                 </Td>
               </Tr>
@@ -70,9 +66,7 @@ const Campaigns = ({ campaigns }) => {
         <Tfoot>
           <Tr>
             <Th>Cause</Th>
-            <Th>Start Date</Th>
-            <Th>End Date</Th>
-            <Th>View</Th>
+            <Th>Delete</Th>
           </Tr>
         </Tfoot>
       </Table>

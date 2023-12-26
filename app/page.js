@@ -58,7 +58,7 @@ export default function Page() {
           variant="light"
           style={{
             position: "absolute",
-            bottom: "80px",
+            bottom: "20px",
             boxShadow: "100 10px 16px rgba(0, 0, 0, 0.9)",
             left: "50%",
             transform: "translateX(-50%)",

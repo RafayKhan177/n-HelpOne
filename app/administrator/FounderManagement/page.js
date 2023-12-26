@@ -18,12 +18,12 @@ export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCampaigns = campaigns.filter((campaign) =>
-    campaign.projectName.toLowerCase().includes(searchTerm.toLowerCase())
+    campaign.authorName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   useEffect(() => {
     const getCampaigns = async () => {
-      const res = await getCollection("projects");
+      const res = await getCollection("founders");
       if (res !== false) {
         setCampaigns(res);
       }
