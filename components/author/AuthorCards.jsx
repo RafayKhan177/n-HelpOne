@@ -14,7 +14,7 @@ export default function AuthorCards({ data }) {
         display: "flex",
         justifyContent: "center",
         flexWrap: "wrap",
-        flexDirection: "row",
+        flexDirection: "row-reverse", // Set flexDirection to "row-reverse"
         gap: 20,
       }}
     >

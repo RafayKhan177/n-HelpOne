@@ -9,6 +9,7 @@ import {
 // import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from "./Footer.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const data = [
   {
@@ -66,7 +67,7 @@ export default function Footer() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           {/* <MantineLogo size={30} /> */}
-          <p>Logo</p>
+          <Image   src="/logo.png" alt="logo" width={170} height={170}/>
           <Text size="xs" c="dimmed" className={classes.description}>
             Build fully functional accessible web applications faster than ever
           </Text>
@@ -75,7 +76,7 @@ export default function Footer() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2020 albashirwelfare.org All rights reserved.
         </Text>
 
         <Group

@@ -17,6 +17,7 @@ import {
 } from "components/Index";
 import { getCollection } from "./api/firebase/functions/get";
 import { Skeleton } from "@chakra-ui/react";
+import { Button } from "@mantine/core";
 
 export default function Page() {
   const [founders, setFounders] = useState(null);
@@ -47,6 +48,22 @@ export default function Page() {
       transition={{ duration: 0.5 }}
     >
       <Hero />
+      <div style={{ position: "relative" }}>
+        <Button
+          bg={"red"}
+          color={"#fff"}
+          variant="light"
+          style={{
+            position: "absolute",
+            bottom: "80px",
+            boxShadow: "100 10px 16px rgba(0, 0, 0, 0.9)",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          Donate Now
+        </Button>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -67,7 +84,7 @@ export default function Page() {
 
       <Grids />
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -78,7 +95,7 @@ export default function Page() {
         ) : (
           <Skeleton height="20px" width="50%" />
         )}
-      </motion.div>
+      </motion.div> */}
 
       <div style={{ marginTop: 10 }}>
         <About />

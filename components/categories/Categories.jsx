@@ -41,13 +41,18 @@ export default function Categories() {
         boxShadow="lg" // Add box shadow
         mb={4} // Adjust margin as needed
       >
-        <UnstyledButton
-          style={{ backgroundImage: `url(${item.image})` }}
-          className={classes.categoryCard}
-          onClick={() => nav(item.id)}
-        >
-          <Overlay color="#000" opacity={0.6} zIndex={1} />
-        </UnstyledButton>
+        <iframe
+          style={{ borderRadius: "1rem" }}
+          width="100%"
+          height="250"
+          src={`https://www.youtube.com/embed/${
+            campaigns.vid && campaigns.vid[0].vi
+          }`}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
         <Box p={4}>
           <Text
             size="xl"

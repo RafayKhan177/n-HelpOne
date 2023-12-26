@@ -1,5 +1,5 @@
 "use client";
-
+import DoubleArrowRoundedIcon from "@mui/icons-material/DoubleArrowRounded";
 import {
   HoverCard,
   Group,
@@ -40,23 +40,11 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import UserButton from "../userButton/UserButton";
-import {
-  Flex,
-  Heading,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger,
-} from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-
+import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
+import MailRoundedIcon from "@mui/icons-material/MailRounded";
 const mockdata = [
   {
     icon: IconCoin,
@@ -140,17 +128,16 @@ export default function HeaderMenu() {
   ));
 
   return (
-    <Box pb={0} style={{ overflow: "hidden", position: "relative" }}>
+    <Box style={{ overflow: "hidden", position: "relative" }}>
       <Flex
-        bg="#fff"
-        py={5}
+        bg="#023e8a"
         alignItems="center"
         justifyContent="space-between"
         padding="0 1rem"
         textTransform="uppercase"
       >
         {/* Social Media Icons */}
-        <Flex alignItems="center">
+        <Flex alignItems="center" p={1}>
           <Link
             href="https://www.facebook.com/albashirwelfare"
             target="_blank"
@@ -183,24 +170,33 @@ export default function HeaderMenu() {
             ml="1rem"
             _hover={{ textDecoration: "none" }}
           >
-            <IconBrandLinkedin
-              size={30}
-              style={{ padding: "2px" }}
-              color="#0077b5"
+            <MailRoundedIcon
+              size={60}
+              style={{
+                padding: "2px",
+                color: "#fff",
+                fontSize: "27px",
+                marginTop: "3px",
+              }}
+              color="#fff"
             />
           </Link>
         </Flex>
 
         {/* Phone Icon */}
-        <Flex alignItems="center">
+        <Flex alignItems="center" p={1}>
           <IconPhone
             size={28}
             style={{ padding: "2px", color: "#fff" }}
-            color="#000"
+            color="#fff"
           />
           {/* Uncomment the following lines if you want to add a phone link */}
-          <Link href="tel:+92 333 5593694" style={{ color: "#000" }} ml="0.5rem">
-          +92 333 5593694
+          <Link
+            href="tel:+92 333 5593694"
+            style={{ color: "#fff" }}
+            ml="0.5rem"
+          >
+            +92 333 5593694
           </Link>
         </Flex>
       </Flex>
@@ -228,11 +224,6 @@ export default function HeaderMenu() {
           >
             {/* OPPOSITE Of POVERTY is JUSTICE! */}
           </Heading>
-
-          {/* <IconChevronRight
-            style={{ width: rem(14), height: rem(14), color: "#fff" }}
-            stroke={3.5}
-          /> */}
         </div>
       </Link>
       <header className={classes.header}>
@@ -240,11 +231,11 @@ export default function HeaderMenu() {
           {/* <MantineLogo size={30} /> */}
           <Link href="/">
             <Image
-              src="/logo.jpg"
-              width={90}
-              height={55}
+              src="/logo.png"
+              width={80}
+              height={40}
               alt="logo"
-              style={{ zIndex: 999, position: "absolute", top: 32 }}
+              style={{ zIndex: 999, position: "absolute", top: 45 }}
             />
           </Link>
 
@@ -326,19 +317,25 @@ export default function HeaderMenu() {
             ) : null}
           </Group>
 
-          {/* <Group visibleFrom="sm">
-            <UserButton user={user} />
-          </Group> */}
-
-          <Button size="compact-xl" ml={100} bg={"red"}>
-            Donate Now
-          </Button>
-
-          <Burger
-            opened={drawerOpened}
-            onClick={toggleDrawer}
-            hiddenFrom="sm"
-          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Link href={"/Contribution"}>
+              <VolunteerActivismRoundedIcon
+                style={{ color: "#fff", marginRight: 5 }}
+              />
+            </Link>
+            <Burger
+              opened={drawerOpened}
+              onClick={toggleDrawer}
+              hiddenFrom="sm"
+              color={"#fff"}
+            />
+          </div>
         </Group>
       </header>
 
@@ -386,6 +383,17 @@ export default function HeaderMenu() {
           <UserButton user={user} />
         </Group>
       </Drawer>
+      <Flex alignItems="center" justifyContent={"center"} p={1} bgColor={"red"}>
+        <Link
+          href="https://www.facebook.com/albashirwelfare"
+          target="_blank"
+          rel="noopener noreferrer"
+          _hover={{ textDecoration: "none" }}
+          style={{ fontWeight: "900", color: "#fff" }}
+        >
+          Donate Now
+        </Link>
+      </Flex>
     </Box>
   );
 }

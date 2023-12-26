@@ -30,7 +30,7 @@
     "**/*.tsx",
     "components/about/About.jsx",
     "build/types/**/*.ts"
-  ],
+, "components/Grids/OurWorkPicCollage.jsx"  ],
   "exclude": [
     "node_modules"
   ]
