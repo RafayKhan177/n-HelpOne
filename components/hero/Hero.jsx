@@ -20,7 +20,7 @@ export default function Hero() {
   const imgP2 =
     "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo%20c/1.png";
   const imgP3 =
-    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo2.png";
+    "https://github.com/RafayKhan177/Raw-Images/blob/main/2.png?raw=true";
 
   return (
     <>

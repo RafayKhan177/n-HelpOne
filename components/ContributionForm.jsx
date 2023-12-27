@@ -1,33 +1,41 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { VStack, Input, Select, Text, Button, Spinner, useToast } from "@chakra-ui/react";
+import {
+  VStack,
+  Input,
+  Select,
+  Text,
+  Button,
+  Spinner,
+  useToast,
+} from "@chakra-ui/react";
 import { getCausees } from "app/api/firebase/functions/get";
 
 const ContributionForm = ({ onContribute, dVal }) => {
   console.log("dVal:", dVal);
-  const toast = useToast()
-  const [causeValues, setCauseValues] = useState([]);
+  const toast = useToast();
+  // const [causeValues, setCauseValues] = useState([]);
   const [contribution, setContribution] = useState({
     name: "",
     email: "",
     phone: "",
     amount: "",
-    donationFor: dVal || "",
+    // donationFor: dVal || "",
   });
 
   const handleContributeClick = () => {
     if (!contribution.name || !contribution.email || !contribution.amount) {
       toast({
-        title: 'Please fill in all required fields.',
-        status: 'error',
+        title: "Please fill in all required fields.",
+        status: "error",
         duration: 9000,
         isClosable: true,
-      })
+      });
       return;
     }
 
-    // Clear any previous error
-    setError(null);
+    // // Clear any previous error
+    // setError(null);
 
     // Assuming you want to pass the contribution data to a parent component
     onContribute(contribution);
@@ -41,14 +49,14 @@ const ContributionForm = ({ onContribute, dVal }) => {
     }));
   };
 
-  useEffect(() => {
-    const fetchCauseValues = async () => {
-      const causes = await getCausees("campaigns");
-      setCauseValues(causes);
-    };
+  // useEffect(() => {
+  //   const fetchCauseValues = async () => {
+  //     const causes = await getCausees("campaigns");
+  //     setCauseValues(causes);
+  //   };
 
-    fetchCauseValues();
-  }, []);
+  //   fetchCauseValues();
+  // }, []);
 
   return (
     <VStack spacing={4}>
@@ -90,7 +98,7 @@ const ContributionForm = ({ onContribute, dVal }) => {
         onChange={handleChange}
         required
       />
-      {causeValues ? (
+      {/* {causeValues ? (
         <Select
           variant="filled"
           size="md"
@@ -108,9 +116,7 @@ const ContributionForm = ({ onContribute, dVal }) => {
         </Select>
       ) : (
         <Spinner size="xs" />
-      )}
-
-     
+      )} */}
 
       {/* Display the donation amount below the input */}
       <Text fontSize="lg">Donation Amount: {contribution.amount || 0}$</Text>
