@@ -69,7 +69,6 @@ const mockdata = [
     icon: IconNotification,
     title: "Founders",
     description: "Manage and organize your campaigns with this powerful tool. ",
-
     link: "/administrator/FounderManagement",
   },
 ];
@@ -79,10 +78,7 @@ const navLinks = [
   { href: "/Campaigns", label: "Campaigns" },
   { href: "/Zakat", label: "Zakat" },
   { href: "/Contact", label: "Contact" },
-  // { href: "/About", label: "About" },
-  // { href: "/OurWork", label: "Our Work" },
-  // { href: "/WhereWeWork", label: "Where We Work" },
-  // { href: "/WhoAreWe", label: "Who Are We" },
+  { href: "/founders", label: "Founders" },
 ];
 
 const about = [

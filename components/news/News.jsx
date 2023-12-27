@@ -34,20 +34,21 @@ const mockdata = [
 ];
 
 export default function News() {
-  const theme = useMantineTheme();
 
   const features = mockdata.map((feature, index) => (
     <Card
       key={feature.title + index}
       shadow="md"
       radius="md"
-      className={`${classes.card} ${index % 2 === 0 ? classes.evenCard : classes.oddCard}`}
+      className={`${classes.card} ${
+        index % 2 === 0 ? classes.evenCard : classes.oddCard
+      }`}
       padding="xl"
     >
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}
-        color={theme.colors.blue[6]}
+        color={"#fff"}
       />
       <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
         {feature.title}
@@ -71,7 +72,8 @@ export default function News() {
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        Discover the latest achievements and milestones in our ongoing mission to make a positive difference in the lives of the underprivileged.
+        Discover the latest achievements and milestones in our ongoing mission
+        to make a positive difference in the lives of the underprivileged.
       </Text>
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
