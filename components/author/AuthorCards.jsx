@@ -25,12 +25,10 @@ export default function AuthorCards({ data }) {
           return (
             <Box
               key={index}
-              // boxShadow="lg"
-              // p={4}
               borderRadius="md"
             >
               <Card
-                w={300}
+                w={350}
                 p="lg"
                 shadow="lg"
                 className={classes.card}

@@ -15,6 +15,7 @@ export { default as AddFounder } from "./AddFounder";
 export { default as AddProject } from "./AddProject";
 export { default as News } from "./news/News";
 export { default as OurWorkPicCollage } from "./Grids/OurWorkPicCollage";
+export { default as WaysToDonate } from "./WaysToDonate";
 
 export { default as Signin } from "./authentication/signin/Signin";
 export { default as Signup } from "./authentication/signup/Signup";

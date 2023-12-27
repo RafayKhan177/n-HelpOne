@@ -1,8 +1,7 @@
-"use client";
 
 import { Image, Show } from "@chakra-ui/react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import "react-awesome-slider/dist/styles.css";
+import AwesomeSlider from "react-awesome-slider";
 
 const imageUrls = [
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/desk%20c/1.png",
@@ -12,15 +11,15 @@ const imageUrls = [
 ];
 
 const mobileImageUrls = [
-  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/Mobo1AL-BASHIR%20WEL%20ARE.png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo%20c/1.png",
-  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo%20c/2.png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/4.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/6.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/Mobo1AL-BASHIR%20WEL%20ARE.png",
 ];
 
 const Hero = () => {
-  const renderCarouselItem = (url, h) => (
-    <div key={url}>
+  const renderSliderItem = (url, h) => (
+    <div key={url} data-src={url}>
       <Image
         src={url}
         alt="hero-image"
@@ -38,15 +37,15 @@ const Hero = () => {
   return (
     <>
       <Show breakpoint="(min-width: 1000px)">
-        <Carousel autoPlay infiniteLoop>
-          {imageUrls.map((url) => renderCarouselItem(url, "70vh"))}
-        </Carousel>
+        <AwesomeSlider>
+          {imageUrls.map((url) => renderSliderItem(url, "70vh"))}
+        </AwesomeSlider>
       </Show>
 
       <Show breakpoint="(max-width: 1000px)">
-        <Carousel autoPlay infiniteLoop>
-          {mobileImageUrls.map((url) => renderCarouselItem(url, "50vh"))}
-        </Carousel>
+        <AwesomeSlider>
+          {mobileImageUrls.map((url) => renderSliderItem(url, "50vh"))}
+        </AwesomeSlider>
       </Show>
     </>
   );
