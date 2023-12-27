@@ -34,7 +34,6 @@ const mockdata = [
 ];
 
 export default function News() {
-
   const features = mockdata.map((feature, index) => (
     <Card
       key={feature.title + index}
@@ -48,9 +47,15 @@ export default function News() {
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}
-        color={"#fff"}
+        color={"#a8dadc"}
       />
-      <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
+      <Text
+        fz="lg"
+        c={"#f1faee"}
+        fw={500}
+        className={classes.cardTitle}
+        mt="md"
+      >
         {feature.title}
       </Text>
       <Text fz="sm" c="dimmed" mt="sm">
