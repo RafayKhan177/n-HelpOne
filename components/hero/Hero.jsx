@@ -37,14 +37,16 @@ const Hero = () => {
   return (
     <section style={{ marginBottom: "3rem" }}>
       <Show breakpoint="(min-width: 1000px)">
-        <AwesomeSlider>
-          {imageUrls.map((url) => renderSliderItem(url, "60vh"))}
+        <AwesomeSlider style={{ width: "100vw", height: "70vh" }}>
+          {imageUrls.map((url) => renderSliderItem(url, "auto"))}
         </AwesomeSlider>
       </Show>
 
       <Show breakpoint="(max-width: 1000px)">
-        <AwesomeSlider>
-          {mobileImageUrls.map((url) => renderSliderItem(url, "50vh"))}
+        <AwesomeSlider
+          style={{ width: "100vw", height: "auto", maxHeight: "70vh" }}
+        >
+          {mobileImageUrls.map((url) => renderSliderItem(url, "auto"))}
         </AwesomeSlider>
       </Show>
     </section>
