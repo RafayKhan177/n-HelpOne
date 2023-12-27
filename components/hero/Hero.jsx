@@ -19,34 +19,29 @@ const mobileImageUrls = [
 
 const Hero = () => {
   const renderSliderItem = (url, h) => (
-    <div key={url} data-src={url}>
-      <Image
-        src={url}
-        alt="hero-image"
-        width={900}
-        height={600}
-        style={{
-          width: "100vw",
-          height: h,
-          maxHeight: "60vh",
-        }}
-      />
-    </div>
+    <Image
+      key={url}
+      data-src={url}
+      src={url}
+      alt="hero-image"
+      style={{
+        width: "100%",
+        height: h,
+        // objectFit: "contain",
+      }}
+    />
   );
 
   return (
     <section style={{ marginBottom: "3rem" }}>
       <Show breakpoint="(min-width: 1000px)">
-        <AwesomeSlider style={{ width: "100vw", height: "70vh" }}>
-          {imageUrls.map((url) => renderSliderItem(url, "auto"))}
+        <AwesomeSlider style={{ height: "70vh" }}>
+          {imageUrls.map((url) => renderSliderItem(url, "70vh"))}
         </AwesomeSlider>
       </Show>
-
       <Show breakpoint="(max-width: 1000px)">
-        <AwesomeSlider
-          style={{ width: "100vw", height: "auto", maxHeight: "70vh" }}
-        >
-          {mobileImageUrls.map((url) => renderSliderItem(url, "auto"))}
+        <AwesomeSlider style={{ height: "51vh" }}>
+          {mobileImageUrls.map((url) => renderSliderItem(url, "51vh"))}
         </AwesomeSlider>
       </Show>
     </section>
