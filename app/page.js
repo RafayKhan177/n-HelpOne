@@ -56,9 +56,11 @@ export default function Page() {
           bg={"red"}
           color={"#fff"}
           variant="light"
+          size="lg"
           style={{
+            zIndex: 999,
             position: "absolute",
-            bottom: "20px",
+            bottom: "10px",
             boxShadow: "100 10px 16px rgba(0, 0, 0, 0.9)",
             left: "50%",
             transform: "translateX(-50%)",

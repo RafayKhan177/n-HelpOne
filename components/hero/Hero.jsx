@@ -1,4 +1,4 @@
-
+"use client";
 import { Image, Show } from "@chakra-ui/react";
 import "react-awesome-slider/dist/styles.css";
 import AwesomeSlider from "react-awesome-slider";
@@ -24,21 +24,21 @@ const Hero = () => {
         src={url}
         alt="hero-image"
         width={900}
-        height={1500}
+        height={600}
         style={{
           width: "100vw",
           height: h,
-          maxHeight: "80vh",
+          maxHeight: "60vh",
         }}
       />
     </div>
   );
 
   return (
-    <>
+    <section style={{ marginBottom: "3rem" }}>
       <Show breakpoint="(min-width: 1000px)">
         <AwesomeSlider>
-          {imageUrls.map((url) => renderSliderItem(url, "70vh"))}
+          {imageUrls.map((url) => renderSliderItem(url, "60vh"))}
         </AwesomeSlider>
       </Show>
 
@@ -47,7 +47,7 @@ const Hero = () => {
           {mobileImageUrls.map((url) => renderSliderItem(url, "50vh"))}
         </AwesomeSlider>
       </Show>
-    </>
+    </section>
   );
 };
 
