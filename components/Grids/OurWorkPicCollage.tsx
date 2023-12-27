@@ -36,7 +36,7 @@ export default function OurWorkPicCollage() {
       </Text>
       <SimpleGrid cols={{ base: 1, xs: 4 }}>
         <Image
-          src="https://img.freepik.com/free-photo/medium-shot-kids-sitting-outdoors_23-2148761579.jpg?w=996&t=st=1703512887~exp=1703513487~hmac=1f2fba8fda890e495ae5286a83eebe6feb958f8fa019bb08b868f47a15c4d4fa"
+          src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(1).jpg"
           alt="Work Image 1"
           style={{
             width: "100%",
@@ -47,7 +47,7 @@ export default function OurWorkPicCollage() {
         />
         <Stack>
           <Image
-            src="https://img.freepik.com/free-photo/kids-having-fun-as-boy-scouts_23-2149657072.jpg?t=st=1703512296~exp=1703512896~hmac=bcb2952fe9b47efbc2c9371a992d2148877cdbf7ee4fbf5efda4c70862ac8f2f"
+            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(2).jpg"
             alt="Work Image 2"
             style={{
               width: "100%",
@@ -57,7 +57,7 @@ export default function OurWorkPicCollage() {
             }}
           />
           <Image
-            src="https://img.freepik.com/free-photo/poor-child-landfill-looks-forward-with-hope_1150-10378.jpg?t=st=1703512879~exp=1703513479~hmac=a3955f78b2777e3f5b90b3e9cf8a78f4932256f62a70111c4ca952960424f9c5"
+            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(4).jpg"
             alt="Work Image 3"
             style={{
               width: "100%",
@@ -69,7 +69,7 @@ export default function OurWorkPicCollage() {
         </Stack>
         <Stack>
           <Image
-            src="https://img.freepik.com/premium-photo/poor-child-doing-his-homework-street-light_75648-769.jpg?w=996"
+            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(5).jpg"
             alt="Work Image 4"
             style={{
               width: "100%",
@@ -79,7 +79,7 @@ export default function OurWorkPicCollage() {
             }}
           />
           <Image
-            src="https://img.freepik.com/free-photo/kids-having-fun-as-boy-scouts_23-2149657072.jpg?t=st=1703512296~exp=1703512896~hmac=bcb2952fe9b47efbc2c9371a992d2148877cdbf7ee4fbf5efda4c70862ac8f2f"
+            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(6).jpg"
             alt="Work Image 5"
             style={{
               width: "100%",
@@ -90,7 +90,7 @@ export default function OurWorkPicCollage() {
           />
         </Stack>
         <Image
-          src="https://img.freepik.com/free-photo/kids-having-fun-as-boy-scouts_23-2149657072.jpg?t=st=1703512296~exp=1703512896~hmac=bcb2952fe9b47efbc2c9371a992d2148877cdbf7ee4fbf5efda4c70862ac8f2f"
+          src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(3).jpg"
           alt="Work Image 7"
           style={{
             width: "100%",
