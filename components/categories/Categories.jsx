@@ -30,7 +30,6 @@ export default function Categories() {
     getCampaigns();
   }, []);
 
-
   const items =
     campaigns &&
     campaigns.map((item) => (
@@ -46,9 +45,7 @@ export default function Categories() {
           style={{ borderRadius: "1rem" }}
           width="100%"
           height="250"
-          src={`https://www.youtube.com/embed/${
-            item.vid && item.vid[0].vi
-          }`}
+          src={`https://www.youtube.com/embed/${item.vid && item.vid[0].vi}`}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -64,7 +61,7 @@ export default function Categories() {
           >
             {item.projectName}
           </Text>
-          <Text mt={2} >
+          <Text mt={2}>
             {item.disc.length > 110
               ? `${item.disc.substring(0, 110)}...`
               : item.disc}
@@ -76,7 +73,7 @@ export default function Categories() {
             size="sm"
             mt={2}
           >
-            Donate Now
+            Watch More
           </Button>
         </Box>
       </Box>
