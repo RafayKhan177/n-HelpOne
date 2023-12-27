@@ -47,7 +47,7 @@ export default function Page() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <Link
-            href="/administrator/CampaignManagement/Create"
+            href="/administrator/FounderManagement/Create"
             style={{ textDecoration: "none" }}
           >
             <Button colorScheme="blue" ml={5}>

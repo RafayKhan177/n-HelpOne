@@ -14,11 +14,13 @@ export default function Hero() {
   const img3 =
     "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/WhatsApp%20Image%202023-12-25%20at%2018.29.36_01839d04.jpg";
   const img4 =
-    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/WhatsApp%20Image%202023-12-24%20at%2018.36.59_6241d33c.jpg";
+    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/desk%20c/1.png";
   const imgP1 =
     "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/Mobo1AL-BASHIR%20WEL%20ARE.png";
   const imgP2 =
-    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo1.png";
+    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo%20c/1.png";
+  const imgP3 =
+    "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo2.png";
 
   return (
     <>
@@ -81,11 +83,12 @@ export default function Hero() {
               style={{
                 width: "100vw",
                 height: "auto",
-                objectFit: "cover",
-                maxHeight: "100vh",
+                // objectFit: "cover",
+                maxHeight: "70vh",
               }}
             />
-          </div>{" "}
+          </div>
+
           <div>
             <Image
               src={imgP2}
@@ -95,8 +98,22 @@ export default function Hero() {
               style={{
                 width: "100vw",
                 height: "auto",
-                objectFit: "cover",
-                maxHeight: "100vh",
+                // objectFit: "cover",
+                maxHeight: "70vh",
+              }}
+            />
+          </div>
+          <div>
+            <Image
+              src={imgP3}
+              alt="hero-image"
+              width={900}
+              height={1500}
+              style={{
+                width: "100vw",
+                height: "auto",
+                // objectFit: "cover",
+                maxHeight: "70vh",
               }}
             />
           </div>

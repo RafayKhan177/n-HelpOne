@@ -23,12 +23,13 @@ export default function Categories() {
 
   useEffect(() => {
     const getCampaigns = async () => {
-      const res = await getCollection("campaigns");
+      const res = await getCollection("projects");
       console.log(res);
       setCampaigns(res);
     };
     getCampaigns();
   }, []);
+
 
   const items =
     campaigns &&
@@ -46,7 +47,7 @@ export default function Categories() {
           width="100%"
           height="250"
           src={`https://www.youtube.com/embed/${
-            campaigns.vid && campaigns.vid[0].vi
+            item.vid && item.vid[0].vi
           }`}
           title="YouTube video player"
           frameborder="0"
@@ -61,13 +62,14 @@ export default function Categories() {
             c={"#000"}
             className={classes.categoryLabel}
           >
-            {item.cause}
+            {item.projectName}
           </Text>
-          <Text mt={2} c={"#333"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nobis
-            unde quibusdam quos saepe veniam animi debitis ipsa voluptatibus
-            magni.
+          <Text mt={2} >
+            {item.disc.length > 110
+              ? `${item.disc.substring(0, 110)}...`
+              : item.disc}
           </Text>
+
           <Button
             onClick={() => nav(item.id)}
             bgColor={"#ffb703"}

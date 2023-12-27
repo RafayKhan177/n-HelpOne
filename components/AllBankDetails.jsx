@@ -64,6 +64,7 @@ export default function AllBankDetails({ accounts }) {
         justifyContent: "center",
         flexDirection: "column",
         width: "90vw",
+        marginTop:'1rem'
       }}
     >
       <h1

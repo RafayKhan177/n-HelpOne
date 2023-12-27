@@ -9,10 +9,10 @@ export { default as MyProfile } from "./MyProfile";
 export { default as EditCampaign } from "./EditCampaign";
 export { default as ProjectCard } from "./ProjectCard/ProjectCard";
 export { default as AuthorCards } from "./author/AuthorCards";
-export { default as ProjectFounderDetails } from "./ProjectFounderDetails";
+export { default as FounderDetails } from "./FounderDetails";
 export { default as Grids } from "./Grids/Grids";
-export { default as AddProject } from "./AddFounder";
-export { default as AddFounder } from "./AddProject";
+export { default as AddFounder } from "./AddFounder";
+export { default as AddProject } from "./AddProject";
 export { default as News } from "./news/News";
 export { default as OurWorkPicCollage } from "./Grids/OurWorkPicCollage";
 

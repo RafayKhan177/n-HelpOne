@@ -1,13 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getDocById } from "../../api/firebase/functions/get"; // Assuming you have an api service for fetching data
-import { Box, Button, Flex, Spinner, Text } from "@chakra-ui/react";
+import { getCollection, getDocById } from "../../api/firebase/functions/get"; // Assuming you have an api service for fetching data
+import { Box, Button, Flex, Skeleton, Spinner, Text } from "@chakra-ui/react";
 import {
   AllBankDetails,
   ContributionForm,
   CustomHero,
   CampaignDetails,
+  PageHeader,
+  AuthorCards,
+  ContributionCard,
+  News,
+  OurWorkPicCollage,
+  Categories,
 } from "components/Index";
 import { usePathname } from "next/navigation";
 import { accounts } from "static";
@@ -15,6 +21,7 @@ import { accounts } from "static";
 export default function Page() {
   const [invoice, setInvoice] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState(null);
 
   const pathname = usePathname();
   const id = pathname.split("/").pop();
@@ -23,8 +30,10 @@ export default function Page() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const res = await getDocById(id, "campaigns");
+        const res = await getDocById(id, "projects");
         setInvoice(res);
+        const projectsData = await getCollection("projects");
+        setProjects(projectsData);
       } catch (error) {
         console.error("Something went wrong:", error);
       } finally {
@@ -39,22 +48,21 @@ export default function Page() {
     // Implement your contribute logic here
   };
 
-  const { cause, description, image } = invoice;
-  const img =
+  const { disc, img, vid, projectName } = invoice;
+  const imgHero =
     "https://img.freepik.com/free-photo/person-holding-heart-shaped-object_23-2150703734.jpg?t=st=1701007515~exp=1701011115~hmac=644cb17674f44360f7c3fd9766f1368df2cb079c1671fb2040436e23c6e357ff&w=826";
-
-  console.log(cause);
 
   return (
     <>
-      <CustomHero imgc={img} />
+      <CustomHero imgc={imgHero} />
       {loading ? (
-        <Spinner size="xs" />
+        <Skeleton height="10rem" width="100%" />
       ) : (
         <CampaignDetails
-          title={cause}
-          description={description}
-          imageUrl={image}
+          projectName={projectName}
+          disc={disc}
+          img={img}
+          vid={vid}
         />
       )}
       <Box
@@ -70,10 +78,10 @@ export default function Page() {
           Pay This Amount
         </Text>
         <Box p={8} bg="white" borderRadius="xl">
-          {cause && cause ? (
-            <ContributionForm onContribute={handleContribute} dVal={"cause"} />
+          {projectName && projectName ? (
+            <ContributionForm onContribute={handleContribute} dVal={"Cause"} />
           ) : (
-            <Spinner size="xs" />
+            <Skeleton height="15rem" width="100%" />
           )}
         </Box>
         <Flex mt={8} wrap={"wrap"} justify="space-between">
@@ -85,6 +93,18 @@ export default function Page() {
           </Button>
         </Flex>
       </Box>
+
+      <AuthorCards />
+
+      <div>
+        <PageHeader text="More Campaigns" />
+        {projects ? <Categories /> : <Skeleton height="10rem" width="100%" />}
+      </div>
+
+      <OurWorkPicCollage />
+      <ContributionCard />
+
+      <News />
       <AllBankDetails accounts={accounts} />
     </>
   );
