@@ -29,7 +29,8 @@
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "stripe": "^14.10.0"
   },
   "devDependencies": {
     "@types/node": "20.9.2",

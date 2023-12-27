@@ -17,11 +17,13 @@ import {
 } from "components/Index";
 import { usePathname } from "next/navigation";
 import { accounts } from "static";
+import CheckoutSessions from "app/api/CheckoutSessions";
 
 export default function Page() {
   const [invoice, setInvoice] = useState([]);
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState(null);
+  const [amount, setAmount] = useState(0);
 
   const pathname = usePathname();
   const id = pathname.split("/").pop();
@@ -44,8 +46,16 @@ export default function Page() {
     fetchData();
   }, [id]);
 
-  const handleContribute = () => {
-    // Implement your contribute logic here
+  const handleContribute = async ({ pay }) => {
+    try {
+      const checkoutSession = await CheckoutSessions(amount.amount);
+      const { sessionId, url } = checkoutSession;
+      console.log(url);
+
+      window.location.href = url;
+    } catch (error) {
+      console.error("Error during checkout:", error);
+    }
   };
 
   const { disc, img, vid, projectName } = invoice;
@@ -79,7 +89,10 @@ export default function Page() {
         </Text>
         <Box p={8} bg="white" borderRadius="xl">
           {projectName && projectName ? (
-            <ContributionForm onContribute={handleContribute} dVal={"Cause"} />
+            <ContributionForm
+              onContribute={(e) => setAmount(e)}
+              dVal={"Cause"}
+            />
           ) : (
             <Skeleton height="15rem" width="100%" />
           )}
@@ -88,8 +101,13 @@ export default function Page() {
           <Button colorScheme="blue" size="lg" w={300}>
             Pay with PayPal
           </Button>
-          <Button colorScheme="green" size="lg" w={300}>
-            Pay with Stripe
+          <Button
+            colorScheme="green"
+            onClick={handleContribute}
+            size="lg"
+            w={300}
+          >
+            Checkout
           </Button>
         </Flex>
       </Box>

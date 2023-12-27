@@ -1,9 +1,19 @@
-import { Box, Heading, Text, Link, VStack, Center, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Link,
+  VStack,
+  Center,
+  SimpleGrid,
+} from "@chakra-ui/react";
 
 const DonatePage = () => {
   return (
     <Box p={8}>
-      <Heading mb={6} textAlign="center">Ways to Donate</Heading>
+      <Heading mb={6} textAlign="center">
+        Ways to Donate
+      </Heading>
 
       <SimpleGrid columns={[1, 2, 3]} gap={8}>
         {/* Direct Transfer to Bank Card */}
@@ -18,17 +28,8 @@ const DonatePage = () => {
             color="white"
             textAlign="center"
           >
-            <Text fontWeight="bold" mb={4}>1. Direct Transfer to Bank</Text>
-            <Text>
-              You can make a direct bank transfer to our account. Please use the following details:
-              <br />
-              Bank: [Your Bank Name]
-              <br />
-              Account Name: [Your Account Name]
-              <br />
-              Account Number: [Your Account Number]
-              <br />
-              Reference: [Your Donation Purpose]
+            <Text fontWeight="bold" mb={4}>
+              We also accept donations securely Direct Transfer to Bank
             </Text>
           </Box>
         </Center>
@@ -45,9 +46,12 @@ const DonatePage = () => {
             color="white"
             textAlign="center"
           >
-            <Text fontWeight="bold" mb={4}>2. Stripe</Text>
+            <Text fontWeight="bold" mb={4}>
+              2. Stripe
+            </Text>
             <Text>
-              We also accept donations securely through Stripe. Click the following link to donate via Stripe:
+              We also accept donations securely through Stripe. Click the
+              following link to donate via Stripe:
               <br />
               <Link href="[Your Stripe Donation Link]" isExternal color="white">
                 Donate with Stripe
@@ -68,9 +72,12 @@ const DonatePage = () => {
             color="white"
             textAlign="center"
           >
-            <Text fontWeight="bold" mb={4}>3. PayPal</Text>
+            <Text fontWeight="bold" mb={4}>
+              3. PayPal
+            </Text>
             <Text>
-              You can donate using PayPal. Click the following link to donate via PayPal:
+              You can donate using PayPal. Click the following link to donate
+              via PayPal:
               <br />
               <Link href="[Your PayPal Donation Link]" isExternal color="white">
                 Donate with PayPal

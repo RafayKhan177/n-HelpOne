@@ -85,7 +85,8 @@ const about = [
   { href: "/About", label: "About" },
   { href: "/OurWork", label: "Our Work" },
   { href: "/WhereWeWork", label: "Where We Work" },
-  { href: "/WhoAreWe", label: "Ways To Donate" },
+  { href: "/WhoAreWe", label: "Who Are We" },
+  { href: "/waysToDonate", label: "Ways To Donate" },
 ];
 
 export default function HeaderMenu() {

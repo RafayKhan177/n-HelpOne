@@ -19,6 +19,7 @@ import {
 import { getCollection } from "./api/firebase/functions/get";
 import { Skeleton } from "@chakra-ui/react";
 import { Button, Divider } from "@mantine/core";
+import Link from "next/link";
 // import {  } from "components/faq/FaqAcc";
 
 export default function Page() {
@@ -52,22 +53,24 @@ export default function Page() {
       <Divider />
       <Hero />
       <div style={{ position: "relative" }}>
-        <Button
-          bg={"red"}
-          color={"#fff"}
-          variant="light"
-          size="lg"
-          style={{
-            zIndex: 999,
-            position: "absolute",
-            bottom: "10px",
-            boxShadow: "100 10px 16px rgba(0, 0, 0, 0.9)",
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
-        >
-          Donate Now
-        </Button>
+        <Link href={"/Contribution"}>
+          <Button
+            bg={"red"}
+            color={"#fff"}
+            variant="light"
+            size="lg"
+            style={{
+              zIndex: 999,
+              position: "absolute",
+              bottom: "10px",
+              boxShadow: "100 10px 16px rgba(0, 0, 0, 0.9)",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+          >
+            Donate Now
+          </Button>
+        </Link>
       </div>
 
       <motion.div

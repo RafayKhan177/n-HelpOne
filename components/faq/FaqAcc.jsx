@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Container, Title, Accordion } from "@mantine/core";
 import classes from "./FaqAcc.module.css";
 
 const faqContent = {
-  resetPassword: "To reset your password, follow the steps outlined in the 'Forgot Password' section on the login page.",
-  multipleAccounts: "Yes, you can create more than one account. Each account should have a unique email address.",
-  subscribeNewsletter: "You can subscribe to our monthly newsletter by navigating to the 'Newsletter' section in your account settings.",
-  secureCreditCard: "Yes, we take the security of your credit card information seriously. All credit card data is stored securely and encrypted.",
-  paymentSystems: "We work with various payment systems, including credit cards, PayPal, and bank transfers. You can choose the most convenient option during checkout.",
+  subscribeNewsletter:
+    "You can subscribe to our monthly newsletter by navigating to the 'Newsletter' section in your account settings.",
+  secureCreditCard:
+    "Yes, we take the security of your credit card information seriously. All credit card data is stored securely and encrypted.",
+  paymentSystems:
+    "We work with various payment systems, including credit cards, PayPal, and bank transfers. You can choose the most convenient option during checkout.",
 };
 
 export default function FaqAcc() {

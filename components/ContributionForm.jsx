@@ -11,35 +11,14 @@ import {
 } from "@chakra-ui/react";
 import { getCausees } from "app/api/firebase/functions/get";
 
-const ContributionForm = ({ onContribute, dVal }) => {
-  console.log("dVal:", dVal);
-  const toast = useToast();
-  // const [causeValues, setCauseValues] = useState([]);
+const ContributionForm = ({ onContribute }) => {
+
   const [contribution, setContribution] = useState({
     name: "",
     email: "",
     phone: "",
     amount: "",
-    // donationFor: dVal || "",
   });
-
-  const handleContributeClick = () => {
-    if (!contribution.name || !contribution.email || !contribution.amount) {
-      toast({
-        title: "Please fill in all required fields.",
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-      });
-      return;
-    }
-
-    // // Clear any previous error
-    // setError(null);
-
-    // Assuming you want to pass the contribution data to a parent component
-    onContribute(contribution);
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +26,7 @@ const ContributionForm = ({ onContribute, dVal }) => {
       ...prevContribution,
       [name]: value,
     }));
+    onContribute(contribution);
   };
 
   // useEffect(() => {
@@ -120,9 +100,6 @@ const ContributionForm = ({ onContribute, dVal }) => {
 
       {/* Display the donation amount below the input */}
       <Text fontSize="lg">Donation Amount: {contribution.amount || 0}$</Text>
-      <Button colorScheme="teal" onClick={handleContributeClick}>
-        Contribute
-      </Button>
     </VStack>
   );
 };
