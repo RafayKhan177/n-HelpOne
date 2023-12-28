@@ -2,7 +2,7 @@
 import { Image, Show } from "@chakra-ui/react";
 import "react-awesome-slider/dist/styles.css";
 import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import withAutoplay from "react-awesome-slider/dist/autoplay";
 
 const imageUrls = [
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/desk%20c/1.png",
@@ -20,15 +20,15 @@ const mobileImageUrls = [
 
 const Hero = () => {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
-  
-  const renderSliderItem = (url, h) => (
+
+  const renderSliderItem = (url, h, w) => (
     <Image
       key={url}
       data-src={url}
       src={url}
       alt="hero-image"
       style={{
-        width: "100%",
+        width: w || "100%",
         height: h,
         // objectFit: "contain",
       }}
@@ -37,14 +37,16 @@ const Hero = () => {
 
   return (
     <section style={{ marginBottom: "3rem" }}>
-      <Show breakpoint="(min-width: 1000px)">
+      <Show breakpoint="(min-width: 700px)">
         <AutoplaySlider style={{ height: "70vh" }}>
           {imageUrls.map((url) => renderSliderItem(url, "70vh"))}
         </AutoplaySlider>
       </Show>
-      <Show breakpoint="(max-width: 1000px)">
+      <Show breakpoint="(max-width: 700px)">
         <AwesomeSlider style={{ height: "51vh" }}>
-          {mobileImageUrls.map((url) => renderSliderItem(url, "51vh"))}
+          {mobileImageUrls.map((url) =>
+            renderSliderItem(url, "430px", "430px")
+          )}
         </AwesomeSlider>
       </Show>
     </section>
