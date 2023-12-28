@@ -54,7 +54,7 @@ export default function Page() {
 
   return (
     <>
-      <CustomHero imgc={imgHero} />
+      {/* <CustomHero imgc={imgHero} /> */}
       {loading ? (
         <Spinner size="xs" />
       ) : (

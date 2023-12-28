@@ -399,8 +399,8 @@ export default function HeaderMenu() {
       </Drawer>
       <Flex alignItems="center" justifyContent={"center"} p={1} bgColor={"red"}>
         <Link
-          href="https://www.facebook.com/albashirwelfare"
-          target="_blank"
+          href="/Contribution"
+          // target="_blank"
           rel="noopener noreferrer"
           _hover={{ textDecoration: "none" }}
           style={{ fontWeight: "900", color: "#fff" }}

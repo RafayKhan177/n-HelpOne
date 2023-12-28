@@ -92,10 +92,6 @@ export default function Page() {
 
       <Grids />
 
-      <div style={{ marginTop: 10 }}>
-        <About />
-      </div>
-
       <div>
         <PageHeader text="Our Projects Founders" />
         {founders ? (
@@ -103,6 +99,9 @@ export default function Page() {
         ) : (
           <Skeleton height="10rem" width="100%" />
         )}
+      </div>
+      <div style={{ marginTop: 10 }}>
+        <About />
       </div>
 
       <News />
