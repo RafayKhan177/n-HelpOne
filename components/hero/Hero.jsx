@@ -9,13 +9,17 @@ const imageUrls = [
   "https://github.com/RafayKhan177/Raw-Images/blob/main/3.png?raw=true",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/DDAl-Bashir%20Welfare%20excels%20in%20disaster%20management%2C%20swiftly%20responding%20to%20crises%20with%20effective%20relief%20e.png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/5.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/Untitled%20design%20..png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/Untitled%20design.png",
 ];
 
 const mobileImageUrls = [
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/mobo%20c/1.png",
-  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/4.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20DISASTER%20RELIEF.png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/6.png",
-  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/Mobo1AL-BASHIR%20WEL%20ARE.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20WEL%20ARE.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20SOLAR%20PLANT%20..png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20SOLAR%20PLANT.png",
 ];
 
 const Hero = () => {
@@ -30,7 +34,6 @@ const Hero = () => {
       style={{
         width: w || "100%",
         height: h,
-        // objectFit: "contain",
       }}
     />
   );
@@ -38,8 +41,8 @@ const Hero = () => {
   return (
     <section style={{ marginBottom: "3rem" }}>
       <Show breakpoint="(min-width: 700px)">
-        <AutoplaySlider style={{ height: "70vh" }}>
-          {imageUrls.map((url) => renderSliderItem(url, "70vh"))}
+        <AutoplaySlider style={{ height: "86vh" }}>
+          {imageUrls.map((url) => renderSliderItem(url, "90vh"))}
         </AutoplaySlider>
       </Show>
       <Show breakpoint="(max-width: 700px)">
