@@ -31,10 +31,10 @@ const Hero = () => {
       data-src={url}
       src={url}
       alt="hero-image"
-      style={{
-        width: w || "100%",
-        height: h,
-      }}
+      // style={{
+      //   width: w || "100%",
+      //   height: h,
+      // }}
     />
   );
 
@@ -46,9 +46,9 @@ const Hero = () => {
         </AutoplaySlider>
       </Show>
       <Show breakpoint="(max-width: 700px)">
-        <AwesomeSlider style={{ height: "51vh" }}>
+        <AwesomeSlider style={{ height: "49vh", width: "100%" }}>
           {mobileImageUrls.map((url) =>
-            renderSliderItem(url, "430px", "430px")
+            renderSliderItem(url, "300px", "100%")
           )}
         </AwesomeSlider>
       </Show>

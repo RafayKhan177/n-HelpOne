@@ -28,7 +28,7 @@ export default function AuthorCards({ data }) {
               borderRadius="md"
             >
               <Card
-                w={350}
+                w={310}
                 p="lg"
                 shadow="lg"
                 className={classes.card}
