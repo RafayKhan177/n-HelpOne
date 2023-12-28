@@ -44,7 +44,7 @@ export default function Categories() {
         <iframe
           style={{ borderRadius: "1rem" }}
           width="100%"
-          height="250"
+          height="202"
           src={`https://www.youtube.com/embed/${item.vid && item.vid[0].vi}`}
           title="YouTube video player"
           frameborder="0"
