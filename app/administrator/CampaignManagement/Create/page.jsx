@@ -1,9 +1,20 @@
-import { AddProject, StatsGrid } from "components/Index";
+"use client";
+import { AddProject, PasswordInput, StatsGrid } from "components/Index";
+import { useState } from "react";
 
-export default function page() {
+export default function Page() {
+  const [passwordVerified, setPasswordVerified] = useState(false);
+
   return (
     <>
-      <StatsGrid /> <AddProject />
+      {!passwordVerified ? (
+        <PasswordInput onSuccess={() => setPasswordVerified(true)} />
+      ) : (
+        <>
+          {" "}
+          <StatsGrid /> <AddProject />
+        </>
+      )}
     </>
   );
 }

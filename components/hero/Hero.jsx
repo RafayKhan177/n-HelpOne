@@ -11,6 +11,7 @@ const imageUrls = [
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/5.png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/Untitled%20design%20..png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/Untitled%20design.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/aaa.png",
 ];
 
 const mobileImageUrls = [
@@ -20,6 +21,7 @@ const mobileImageUrls = [
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20WEL%20ARE.png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20SOLAR%20PLANT%20..png",
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homie/AL-BASHIR%20SOLAR%20PLANT.png",
+  "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/aaas.png",
 ];
 
 const Hero = () => {
@@ -47,9 +49,7 @@ const Hero = () => {
       </Show>
       <Show breakpoint="(max-width: 700px)">
         <AwesomeSlider style={{ height: "49vh", width: "100%" }}>
-          {mobileImageUrls.map((url) =>
-            renderSliderItem(url, "300px", "100%")
-          )}
+          {mobileImageUrls.map((url) => renderSliderItem(url, "300px", "100%"))}
         </AwesomeSlider>
       </Show>
     </section>

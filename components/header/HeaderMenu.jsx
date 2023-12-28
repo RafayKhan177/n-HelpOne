@@ -53,12 +53,12 @@ const mockdata = [
       "Get a comprehensive overview of your activities and performance. ",
     link: "/administrator/Dashboard",
   },
-  {
-    icon: IconChartPie3,
-    title: "Analytics",
-    description: "Analyze and visualize data for informed decision-making. ",
-    link: "/administrator/FinancialReporting",
-  },
+  // {
+  //   icon: IconChartPie3,
+  //   title: "Analytics",
+  //   description: "Analyze and visualize data for informed decision-making. ",
+  //   link: "/administrator/FinancialReporting",
+  // },
   {
     icon: IconBook,
     title: "Projects",
@@ -79,6 +79,8 @@ const navLinks = [
   { href: "/Zakat", label: "Zakat" },
   { href: "/Contact", label: "Contact" },
   { href: "/founders", label: "Founders" },
+  { href: "/About", label: "About" },
+  { href: "/waysToDonate", label: "Ways To Donate" },
 ];
 
 const about = [
@@ -281,7 +283,7 @@ export default function HeaderMenu() {
               </Popover.Dropdown>
             </Popover>
 
-            {user === "admin" ? (
+            {/* {user === "admin" ? (
               <HoverCard
                 width={600}
                 position="bottom"
@@ -328,7 +330,7 @@ export default function HeaderMenu() {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard>
-            ) : null}
+            ) : null} */}
           </Group>
 
           <div
@@ -375,7 +377,7 @@ export default function HeaderMenu() {
               {link.label}
             </Link>
           ))}
-          {user === "admin" ? (
+          {/* {user === "admin" ? (
             <>
               <UnstyledButton className={classes.link} onClick={toggleLinks}>
                 <Center inline>
@@ -390,7 +392,7 @@ export default function HeaderMenu() {
               </UnstyledButton>
               <Collapse in={linksOpened}>{links}</Collapse>
             </>
-          ) : null}
+          ) : null} */}
         </ScrollArea>
         <Divider my="sm" />
         <Group justify="center" grow pb="xl" px="md">
