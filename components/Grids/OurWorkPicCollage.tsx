@@ -57,7 +57,7 @@ export default function OurWorkPicCollage() {
             }}
           />
           <Image
-            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(4).jpg"
+            src="https://github.com/RafayKhan177/Raw-Images/blob/main/sda.jpg?raw=true"
             alt="Work Image 3"
             style={{
               width: "100%",
@@ -79,7 +79,7 @@ export default function OurWorkPicCollage() {
             }}
           />
           <Image
-            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/homepage/%20(6).jpg"
+            src="https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/WhatsApp%20Image%202023-12-27%20at%2016.55.59_cfe31cfd.jpg"
             alt="Work Image 5"
             style={{
               width: "100%",

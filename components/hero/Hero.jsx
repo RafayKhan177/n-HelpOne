@@ -2,6 +2,7 @@
 import { Image, Show } from "@chakra-ui/react";
 import "react-awesome-slider/dist/styles.css";
 import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
 const imageUrls = [
   "https://raw.githubusercontent.com/RafayKhan177/Raw-Images/main/desk%20c/1.png",
@@ -18,6 +19,8 @@ const mobileImageUrls = [
 ];
 
 const Hero = () => {
+  const AutoplaySlider = withAutoplay(AwesomeSlider);
+  
   const renderSliderItem = (url, h) => (
     <Image
       key={url}
@@ -35,9 +38,9 @@ const Hero = () => {
   return (
     <section style={{ marginBottom: "3rem" }}>
       <Show breakpoint="(min-width: 1000px)">
-        <AwesomeSlider style={{ height: "70vh" }}>
+        <AutoplaySlider style={{ height: "70vh" }}>
           {imageUrls.map((url) => renderSliderItem(url, "70vh"))}
-        </AwesomeSlider>
+        </AutoplaySlider>
       </Show>
       <Show breakpoint="(max-width: 1000px)">
         <AwesomeSlider style={{ height: "51vh" }}>

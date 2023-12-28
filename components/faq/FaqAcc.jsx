@@ -21,18 +21,6 @@ export default function FaqAcc() {
       </Title>
 
       <Accordion variant="separated">
-        <Accordion.Item className={classes.item} value="reset-password">
-          <Accordion.Control>How can I reset my password?</Accordion.Control>
-          <Accordion.Panel>{faqContent.resetPassword}</Accordion.Panel>
-        </Accordion.Item>
-
-        <Accordion.Item className={classes.item} value="another-account">
-          <Accordion.Control>
-            Can I create more than one account?
-          </Accordion.Control>
-          <Accordion.Panel>{faqContent.multipleAccounts}</Accordion.Panel>
-        </Accordion.Item>
-
         <Accordion.Item className={classes.item} value="newsletter">
           <Accordion.Control>
             How can I subscribe to the monthly newsletter?

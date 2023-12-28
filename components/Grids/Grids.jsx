@@ -25,7 +25,7 @@ export default function Grids() {
           overflow="hidden"
         >
           <Box
-            backgroundImage={`url(https://img.freepik.com/free-photo/portrait-little-boy-outdoor_23-2148852690.jpg?w=826&t=st=1703494659~exp=1703495259~hmac=1f1925a08513c8f7e9c64a3223e89b42f96e6acd5eba5783fb05bb72b499018d)`}
+            backgroundImage={`url(/das.jpg)`}
             backgroundSize="cover"
             backgroundPosition="center"
             position="relative"
@@ -81,8 +81,7 @@ export default function Grids() {
             contains the largest volunteer network. In times of disaster or
             hardship or any national emergency, Alkhidmat is considered as a
             most responsive network after the Army to provide relief to the
-            people. From raising orphans to provide relief in any disaster to
-            arranging affordable healthcare & clean water.
+            people. 
           </Text>
         </Box>
 
@@ -91,7 +90,7 @@ export default function Grids() {
             <div
               style={{
                 backgroundImage:
-                  "url(https://img.freepik.com/premium-photo/baby-s-smiling-happy-when-her-see-tourists_38810-2328.jpg?w=996)",
+                  "url(/dsa.jpeg)",
 
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -152,7 +151,7 @@ export default function Grids() {
             <div
               style={{
                 backgroundImage:
-                  "url(https://img.freepik.com/free-photo/portrait-little-boy-outdoor_23-2148852690.jpg?w=826&t=st=1703494659~exp=1703495259~hmac=1f1925a08513c8f7e9c64a3223e89b42f96e6acd5eba5783fb05bb72b499018d)",
+                  "url(https://scontent.fisb4-2.fna.fbcdn.net/v/t39.30808-6/408114541_122114570996118491_121195771092388671_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeGhMGCKpDM7_gj596BwnCUM9ZOk8AFb6v71k6TwAVvq_vp3uYfizC-qWDjr7--pZg0G91dWckVcKzzgwZPSOYm5&_nc_ohc=tjSKYb8ibT8AX_jbNjY&_nc_zt=23&_nc_ht=scontent.fisb4-2.fna&oh=00_AfBY8VBc0OOTTSRfxy_KasiZKoM7ytiTEsS7HViODk31Dg&oe=6591D20B)",
 
                 backgroundSize: "cover",
                 backgroundPosition: "center",
